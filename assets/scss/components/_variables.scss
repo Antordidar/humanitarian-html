@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica.woff2') format('woff2'),
+        url('../fonts/Helvetica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url('../fonts/Helvetica-Bold.woff2') format('woff2'),
+        url('../fonts/Helvetica-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+// FONTS VARIABLE 
+$primary-fonts: 'Helvetica';
+$secondary-fonts: 'Helvetica-Bold';
+
+// COLOR VARIABLE 
+$primary-color    : #585fcb !default;
+$success-color    : #009e74 !default; //#28A745;
+$danger-color     : #fe696a !default;
+$warning-color    : #ffcb47 !default;
+$info-color       : #14afb4 !default;
+$light-color      : #f3f5f9 !default;
+$dark-color       : #373f50 !default;
+$purple-color     : #674df0 !default;
+
+$font-color       : #4b566b;
+$link-color       : $primary-color;
+// $link-color-hover : lighten($danger-color, 8%);
+$link-color-hover : $danger-color;
+$border-color     : rgba(#fff, 0.1) !default;
+$line-color       : #e3e9ef !default;
+$card-color       : transparent;
+$dark-deep-color  : #2b3445;
+$dark-line-color  : #1f2125;
+
+$theme-fonts: (
+    "primary"   : $primary-fonts,
+    "secondary" : $secondary-fonts,
+);
+
+// THEME DEFAULT COLORS VARIABLE
+$theme-colors: (
+    "primary"          : $primary-color,
+    "success"          : $success-color,
+    "danger"           : $danger-color,
+    "warning"          : $warning-color,
+    "info"             : $info-color,
+    "dark"             : $dark-color,
+    "purple"           : $purple-color,
+);
+
+$font-weights: (
+    "300"              : 300,
+    "400"              : 400,
+    "500"              : 500,
+    "600"              : 600,
+    "700"              : 700,
+    "800"              : 800,
+    "900"              : 900,
+);
+
+// DIVICE SIZE VARIABLE
+$device-480   : 480px;
+$device-568   : 568px;
+$device-640   : 640px;
+$device-767   : 767px;
+$device-991   : 991px;
+$device-1024  : 1024px;
+$device-1200  : 1200px;
+$device-1280  : 1280px;
+$device-1400  : 1400px;
+$device-1440  : 1440px;
+$device-1600  : 1600px;
+$device-1800  : 1800px;
+$device-1920  : 1920px;
+
+// FONTS SIZE VARIABLE
+$transition-base : all .2s ease-in-out !default;
+$shadow-base     : -4px 3px 30px 0px rgba(0, 2, 43, .1) !default;
+
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-transitions:          true !default;
+$enable-reduced-motion:       true !default;
+$enable-rounded:              true !default;
+
+.primary-font{font-family: $primary-fonts;}
+.secondary-font{font-family: $secondary-fonts;}
