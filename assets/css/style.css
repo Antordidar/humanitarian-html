@@ -42,8 +42,11 @@
 .header nav.navbar {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.04);
   z-index: 99999;
-  padding-top: 15px;
-  padding-bottom: 15px;
+}
+
+.header .navbar-brand img,
+.header .navbar-brand svg {
+  max-height: 80px;
 }
 
 .header .navbar-nav .nav-link {

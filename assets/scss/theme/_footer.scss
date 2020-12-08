@@ -5,6 +5,7 @@
         li a{
             color: rgba(255, 255, 255, 0.65);
             @include display-block;
+            font-weight: fonts(light);
             margin-bottom: 6px;
 
             @include hover{

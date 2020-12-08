@@ -139,10 +139,13 @@ li {
 }
 
 p {
+  @include opacity(0.7);
   @include font-size(15px);
 	@include font-weight(normal);
-	@include line-height(26px);
+	@include line-height(1.5);
   margin-bottom: 15px;
+  color: $font-color;
+  font-stretch: normal;
 }
 
 hr {
@@ -341,7 +344,7 @@ dl dd {
 
   li a{
     position: relative;
-    color: $font-color;
+    color: #7d879c;
   }
   li:not(:last-child) a{
     padding-right: 15px;
