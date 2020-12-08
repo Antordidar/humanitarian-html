@@ -22,7 +22,8 @@ img {
 }
 
 a,
-.button {
+.button,
+.transition {
 	-webkit-transition: all 0.3s ease-out 0s;
 	-moz-transition: all 0.3s ease-out 0s;
 	-ms-transition: all 0.3s ease-out 0s;
@@ -194,7 +195,7 @@ label {
   
   @include before{
     @include position($left:0, $top: 0, $zIndex: -1);
-    background: $dark-color none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     @include size(100%);
   }
 }
@@ -364,13 +365,22 @@ dl dd {
     margin-bottom: 0;
   }
 }
-
-.divider-space-30{
-    height: 30px;
+.card-item{
+  &-date{
+    margin-right: 1.25rem;
+    text-align: center;
+  }
+  &-badge{
+    @include position(absolute, $top: 20px, $left: 20px);
+  }
 }
-.divider-space-60{
-  height: 60px;
-}
+.divider-space-30{height: 30px;}
+.divider-space-60{height: 60px;}
+.line-height-4{line-height: 1.6;}
+.line-height-5{line-height: 1.6;}
+.line-height-6{line-height: 1.6;}
+.line-height-7{line-height: 1.6;}
+.line-height-8{line-height: 1.6;}
 
 .section-gap{
   &-60{
@@ -418,5 +428,23 @@ dl dd {
   .btn{
     @include border-left-radius(0);
     border: 0;
+  }
+}
+.section-margin-top{
+  position: relative;
+  margin-top: -60px;
+  z-index: 3;
+}
+.select-option-arrow{
+  position: relative;
+
+  @include after{
+    @include color($danger-color, $font-color);
+    @include flexbox;
+    @include size(30px, 20px);
+    @include font-size(20px);
+    @include justify-content(center);
+    @include align-items(center);
+    @include position($content: '\f107', $right: 3px, $top: 50%, $zIndex: 9);
   }
 }

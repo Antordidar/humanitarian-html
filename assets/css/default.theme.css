@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Helvetica';
   src: url("../fonts/Helvetica.woff2") format("woff2"), url("../fonts/Helvetica.woff") format("woff");
@@ -42,7 +43,8 @@ img {
 }
 
 a,
-.button {
+.button,
+.transition {
   transition: all 0.3s ease-out 0s;
 }
 
@@ -217,7 +219,7 @@ label {
   left: 0;
   z-index: -1;
   top: 0;
-  background: #373f50 none repeat scroll 0 0;
+  background: #000 none repeat scroll 0 0;
   width: 100%;
   height: 100%;
 }
@@ -527,12 +529,43 @@ dl dd {
   margin-bottom: 0;
 }
 
+.card-item-date {
+  margin-right: 1.25rem;
+  text-align: center;
+}
+
+.card-item-badge {
+  left: 20px;
+  position: absolute;
+  top: 20px;
+}
+
 .divider-space-30 {
   height: 30px;
 }
 
 .divider-space-60 {
   height: 60px;
+}
+
+.line-height-4 {
+  line-height: 1.6;
+}
+
+.line-height-5 {
+  line-height: 1.6;
+}
+
+.line-height-6 {
+  line-height: 1.6;
+}
+
+.line-height-7 {
+  line-height: 1.6;
+}
+
+.line-height-8 {
+  line-height: 1.6;
 }
 
 .section-gap-60 {
@@ -585,5 +618,39 @@ dl dd {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border: 0;
+}
+
+.section-margin-top {
+  position: relative;
+  margin-top: -60px;
+  z-index: 3;
+}
+
+.select-option-arrow {
+  position: relative;
+}
+
+.select-option-arrow::after {
+  position: absolute;
+  content: '';
+  background-color: #fe696a;
+  color: #4b566b;
+  display: flex;
+  width: 100%;
+  width: 30px;
+  height: 20px;
+  font-size: 20px;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -moz-align-items: center;
+  align-items: center;
+  right: 3px;
+  z-index: 9;
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  top: 50%;
+  transform: translateY(-50%);
 }
 /*# sourceMappingURL=default.theme.css.map */

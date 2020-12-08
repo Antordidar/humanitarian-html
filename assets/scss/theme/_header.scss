@@ -9,6 +9,9 @@
 	.navbar-brand img,
 	.navbar-brand svg{
 		max-height: 80px;
+		@media (max-width: 667px){
+			max-height: 50px;
+		}
 	}
 
 	.navbar-nav .nav-link{
@@ -108,7 +111,7 @@
 @media(max-width: 1199px){
 	.navbar-collapse{
 		@include color($dark-color);
-		@include padding(10px 35px);
+		@include padding(10px 20px);
 		@include margin(0px -15px);
 
 		.nav-item a, .nav-link{
