@@ -439,7 +439,7 @@ dl dd {
   position: relative;
 
   @include after{
-    @include color($danger-color, $font-color);
+    @include color(white, $primary-color);
     @include flexbox;
     @include size(30px, 20px);
     @include font-size(20px);

@@ -633,8 +633,8 @@ dl dd {
 .select-option-arrow::after {
   position: absolute;
   content: '';
-  background-color: #fe696a;
-  color: #4b566b;
+  background-color: white;
+  color: #585fcb;
   display: flex;
   width: 100%;
   width: 30px;
