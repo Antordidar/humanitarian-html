@@ -30,10 +30,12 @@
 		cursor: pointer;
 		@include inline-block;
 
-		@include before{
-			@include size(1px, 26px);
-			background-color: $line-color;
-			@include position($left: 0px, $top: 50%);
+		@media (min-width: 991px){
+			@include before{
+				@include size(1px, 26px);
+				background-color: $line-color;
+				@include position($left: 0px, $top: 50%);
+			}
 		}
 
 		&-icon{

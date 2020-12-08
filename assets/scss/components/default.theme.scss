@@ -3,11 +3,9 @@
 @import "mixins";
 
 /* 1. Theme default css */
-html, body{
-  height: 100%;
-}
+html, body{ height: 100%;}
 
- body {
+body {
   font-family: fonts(primary);
   font-style: normal;
   @include font-weight(normal);
@@ -15,47 +13,37 @@ html, body{
   font-size: 16px;
 }
 
-svg,
-img {
+svg, img {
 	max-width: 100%;
 	@include transition(all 0.3s ease-out 0s);
 }
 
-a,
-.button,
-.transition {
+a, .button, .transition {
 	-webkit-transition: all 0.3s ease-out 0s;
 	-moz-transition: all 0.3s ease-out 0s;
 	-ms-transition: all 0.3s ease-out 0s;
 	-o-transition: all 0.3s ease-out 0s;
 	transition: all 0.3s ease-out 0s;
 }
-a:focus,
-.btn:focus,
-.button:focus {
+
+a:focus, .btn:focus, .button:focus {
 	text-decoration: none;
 	outline: none;
 	box-shadow: none;
 }
 
-a:hover,
-.portfolio-cat a:hover,
-.footer -menu li a:hover {
+a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
 	color: $link-color-hover;
 	text-decoration: none;
 }
-a,
-button {
+
+a, button {
 	color: $link-color;
 	outline: medium none;
 }
+
 button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	color: $dark-color;
 	font-family: $secondary-fonts;
   @include font-weight(700);
@@ -69,72 +57,36 @@ h6 {
     font-weight: inherit;
   }
 }
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-	color: inherit;
-}
-h1 {
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: inherit;}
+
+h1, .h1 {
   @include font-size(40px);
   text-transform: none;
   letter-spacing: 0;
 }
 
-h2 {
+h2, .h2{
   @include font-size(35px);
   text-transform: uppercase;
   // letter-spacing: 0.1em;
 }
 
-h3 {
+h3, .h3 {
   @include font-size(28px);
   text-transform: none;
   letter-spacing: 0;
 }
 
-h4 {
-  @include font-size(22px);
-}
-
-h5 {
-  @include font-size(18px);
-}
-
-h6 {
-  @include font-size(16px);
-}
-
-.h1 {
-  @extend h1;
-}
-
-.h2 {
-  @extend h2;
-}
-
-.h3 {
-  @extend h3;
-}
-
-.h4 {
-  @extend h4;
-}
-
-.h5 {
-  @extend h5;
-}
-
-.h6 {
-  @extend h6;
-}
+h4, .h4 {@include font-size(22px);}
+h5, .h5 {@include font-size(18px);}
+h6, .h6 {@include font-size(16px);}
 
 ul {
 	margin: 0px;
 	padding: 0px;
 }
+
 li {
 	list-style: none
 }
@@ -153,8 +105,13 @@ hr {
 	border-bottom: 1px solid $border-color;
 	border-top: 0 none;
 	margin: 30px 0;
-	padding: 0;
+  padding: 0;
+  
+  &.dark{
+    border-color: $line-color;
+  }
 }
+
 label {
 	color: $font-color;
 	cursor: pointer;
@@ -199,40 +156,18 @@ label {
     @include size(100%);
   }
 }
-[data-overlay="3"]::before {
-  @include opacity(0.3);
-}
-[data-overlay="4"]::before {
-  @include opacity(0.4);
-}
-[data-overlay="5"]::before {
-  @include opacity(0.5);
-}
-[data-overlay="6"]::before {
-  @include opacity(0.6);
-}
-[data-overlay="7"]::before {
-  @include opacity(0.7);
-}
-[data-overlay="8"]::before {
-  @include opacity(0.8);
-}
-[data-overlay="9"]::before {
-  @include opacity(0.9);
-}
+[data-overlay="3"]::before {@include opacity(0.3);}
+[data-overlay="4"]::before {@include opacity(0.4);}
+[data-overlay="5"]::before {@include opacity(0.5);}
+[data-overlay="6"]::before {@include opacity(0.6);}
+[data-overlay="7"]::before {@include opacity(0.7);}
+[data-overlay="8"]::before {@include opacity(0.8);}
+[data-overlay="9"]::before {@include opacity(0.9);}
 // Opacity
-[opacity="3"] {
-  @include opacity(0.3);
-}
-[opacity="4"] {
-  @include opacity(0.3);
-}
-[opacity="5"] {
-  @include opacity(0.3);
-}
-[opacity="6"] {
-  @include opacity(0.3);
-}
+[opacity="3"] {@include opacity(0.3);}
+[opacity="4"] {@include opacity(0.3);}
+[opacity="5"] {@include opacity(0.3);}
+[opacity="6"] {@include opacity(0.3);}
 // OVERLAY COLOR
 .overlay{
   @each $name, $color in $theme-colors {
@@ -269,43 +204,27 @@ label {
     @include font-size(12px);
     @include line-height(23px);
   }
+  &-light-300{color: rgba(255, 255, 255, 0.7) !important;}
+  &-dark-300{color: #7d879c !important;}
 }
 
 // BOX SHADOW
 .shadow{
   @include box-shadow(0 0 25px -3px rgba(0, 0, 0, 0.1) !important);
   @include transition();  
-  &-lg{
-    @include box-shadow(0 1rem 3rem rgba(0,0,0,0.175) !important);
+  &-lg{@include box-shadow(0 1rem 3rem rgba(0,0,0,0.175) !important);}
+  &-hover-lg{@include transition();
+    &:hover{@include box-shadow(0 1rem 3rem rgba(0,0,0,0.175) !important);}
   }
-  &-hover-lg{
-    @include transition();
-    &:hover{
-      @include box-shadow(0 1rem 3rem rgba(0,0,0,0.175) !important);
-    }
+  &-md{@include box-shadow($shadow-base);}
+  &-hover-md{@include transition();
+    &:hover{@include box-shadow($shadow-base);}
   }
-  &-md{
-    @include box-shadow($shadow-base);
+  &-sm{@include box-shadow(0 0.125rem 0.25rem rgba(0,0,0,0.075) !important);}
+  &-hover-sm{@include transition();
+    &:hover{@include box-shadow(0 0.125rem 0.25rem rgba(0,0,0,0.075) !important);}
   }
-  &-hover-md{
-    @include transition();
-    &:hover{
-      @include box-shadow($shadow-base);
-    }
-  }
-  &-sm{
-    @include box-shadow(0 0.125rem 0.25rem rgba(0,0,0,0.075) !important);
-  }
-  &-hover-sm{
-    @include transition();
-    &:hover{
-      @include box-shadow(0 0.125rem 0.25rem rgba(0,0,0,0.075) !important);
-    }
-  }
-  &-none, 
-  &-hover-none:hover{
-    @include box-shadow(none !important);
-  }
+  &-none, &-hover-none:hover{@include box-shadow(none !important);}
 }
 // Avatar Size
 .avatar{
@@ -315,34 +234,26 @@ label {
   
   @include list-loop('&-h-', 'height', 100, 10);
 }
-dl dt {
-	font-weight: 500;
-}
-dl dd {
-	font-weight: 300;
-}
-.list-none {
-	list-style: none;
-}
+dl dt {font-weight: 500;}
+dl dd {font-weight: 300;}
+.list-none {list-style: none;}
 .form-control {
-	&,
-	&:focus {
+	&, &:focus {
 		-webkit-box-shadow: none;
 		-moz-box-shadow: none;
 		box-shadow: none;
     outline: 0;		
 	}
 }
+
 .column-center {
 	float: none;
 	margin: 0 auto;
 }
-.list-inline li,
-.list-inline li a{
-  @include inline-block();
-}
-.list-inline-pipe-line{
 
+.list-inline li, .list-inline li a{@include inline-block();}
+
+.list-inline-pipe-line{
   li a{
     position: relative;
     color: #7d879c;
@@ -359,21 +270,57 @@ dl dd {
     background-color: $line-color;
     @include position($top: 50%, $right: 0, $bottom: 50%)
   }
-} 
+}
+
+.list-breadcrumb{@include display-block;
+  a, span{
+    @include inline-block;
+    color: $light-color;
+    line-height: 1.8;
+
+    i{color: rgba(255, 255, 255, 0.5); margin-right: 5px;}
+  }
+  a:hover{
+    color: $link-color-hover;
+  }
+
+  a:not(:last-child):after{
+    @include position(relative, $content: '\f105');
+    @include size(20px);
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;    
+    color: rgba(255, 255, 255, 0.5);
+    @include font-weight(300);
+  }
+}
+.list-categories a{
+  color: $font-color;
+  margin-bottom: 6px;
+  @include display-block;
+
+  @include hover{color: $link-color-hover;}
+}
+
+.list-social-icons a{
+  @include size(30px);
+  text-align: center;
+}
+
 .card-body{
   p:last-child{
     margin-bottom: 0;
   }
 }
+
 .card-item{
   &-date{
     margin-right: 1.25rem;
     text-align: center;
   }
-  &-badge{
-    @include position(absolute, $top: 20px, $left: 20px);
-  }
+  &-badge{@include position(absolute, $top: 20px, $left: 20px);}
 }
+
 .divider-space-30{height: 30px;}
 .divider-space-60{height: 60px;}
 .line-height-4{line-height: 1.6;}
@@ -394,9 +341,7 @@ dl dd {
 }
 
 .section-title{
-
-  &-md{
-    margin-bottom: 40px;
+  &-md{margin-bottom: 40px;
 
     h3{
       @include font-size(36px);
@@ -404,18 +349,10 @@ dl dd {
     }
   }
 }
-.text-light-300{
-  color: rgba(255, 255, 255, 0.7);
-}
-.mb-30{
-  @include margin-bottom(30px);
-}
-.pt-30{
-  padding-top: 30px;
-}
-.pb-20{
-  padding-bottom: 20px;
-}
+
+.mb-30{@include margin-bottom(30px);}
+.pt-30{padding-top: 30px;}
+.pb-20{padding-bottom: 20px;}
 .subscription-group{
   background-color: $light-color;
   border-radius: .25rem;
@@ -435,9 +372,9 @@ dl dd {
   margin-top: -60px;
   z-index: 3;
 }
+
 .select-option-arrow{
   position: relative;
-
   @include after{
     @include color(white, $primary-color);
     @include flexbox;

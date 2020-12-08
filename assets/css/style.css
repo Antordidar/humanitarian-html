@@ -78,15 +78,17 @@
   vertical-align: middle;
 }
 
-.header-nav-cart::before {
-  position: absolute;
-  content: '';
-  width: 1px;
-  height: 26px;
-  background-color: #e3e9ef;
-  left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
+@media (min-width: 991px) {
+  .header-nav-cart::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 26px;
+    background-color: #e3e9ef;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .header-nav-cart-icon {
@@ -299,8 +301,16 @@
   color: #fe696a;
 }
 
-.footer-area-copyright li:not(:first-child) a {
-  margin-left: 30px;
+@media (min-width: 991px) {
+  .footer-area-copyright li:not(:first-child) a {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer-area-copyright li:not(:first-child) a {
+    margin: 0px 5px;
+  }
 }
 
 .footer-area-social li a {
@@ -423,6 +433,34 @@
 
 .btn-large {
   min-width: 160px;
+}
+
+.badge-primary {
+  background-color: #585fcb !important;
+}
+
+.badge-success {
+  background-color: #009e74 !important;
+}
+
+.badge-danger {
+  background-color: #fe696a !important;
+}
+
+.badge-warning {
+  background-color: #ffcb47 !important;
+}
+
+.badge-info {
+  background-color: #14afb4 !important;
+}
+
+.badge-dark {
+  background-color: #373f50 !important;
+}
+
+.badge-purple {
+  background-color: #674df0 !important;
 }
 
 /*=============================

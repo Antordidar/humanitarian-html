@@ -1,22 +1,6 @@
 /*//=============================
 =============|| BUTTON STYLE ||=========================================================================*/
 .btn{
-	// -moz-user-select: none;
-	// border: medium none;
-    // cursor: pointer;
-    // @include inline-block();
-	// @include font-weight(700);
-	// @include line-height(1);
-	// letter-spacing: 0;
-	// margin-bottom: 0;
-	// @include padding (21px 50px);
-	// text-align: center;
-	// // text-transform: uppercase;
-    // touch-action: manipulation;
-    // @include transition(all 0.4s linear);
-	// white-space: nowrap;
-    // @include border-radius(0);
-
     @each $name, $color in $theme-colors {
         &-#{$name} {
           background-color: $color !important;
@@ -35,5 +19,11 @@
     &-large{
       min-width: 160px;  
     }
-
+}
+.badge{
+  @each $name, $color in $theme-colors {
+    &-#{$name} {
+      background-color: $color !important;
+    }
+  }
 }
