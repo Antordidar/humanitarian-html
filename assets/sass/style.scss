@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/Helvetica.woff2') format('woff2'),
+      url('../fonts/Helvetica.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('../fonts/Helvetica-Bold.woff2') format('woff2'),
+      url('../fonts/Helvetica-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+// FONTS VARIABLE 
+$primary-fonts: 'Helvetica';
+$secondary-fonts: 'Helvetica-Bold';
+
+
+// COLOR VARIABLES
+$theme-primary-color    : #585fcb !default;
+$theme-danger-color     : #FE696A !default;
+$theme-dark-color       : #373f50 !default;
+
+
+$theme-light-color      : #fbfbfb !default;
+
+$theme-font-color       : #4b566b !default;
+$theme-footer-bg-color  : #2B3445 !default;
+$theme-font-light-color : rgba($theme-font-color, 0.7) !default;
+$theme-link-color       : $theme-primary-color !default;
+$theme-line-color       : #e3e9ef !default;
+$theme-border-color     : #eee !default;
+$theme-link-hover-color : lighten($theme-link-color, 8%) !default;
+$theme-light-line-color : rgba($theme-dark-color, 0.1) !default;
+// THEME COLORS
+$theme-colors: (
+  "primary"             : $theme-primary-color,
+  "danger"              : $theme-danger-color,
+  "dark"                : $theme-dark-color,
+);
+
+
+// IMPORT ALL SCSS FILES
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./components/keyframes";
+@import "./components/mixins";
+@import "./components/default";
+@import "./theme/authenticated";
+@import "./theme/header";
+@import "./theme/footer";
+@import "./theme/hero";
+
+
+
+
+
+
+
+// CUSTOM STYLE CSS
+//--------------------------------------------------------------
+.list-inline-pipe-line{
+  li a{
+    position: relative;color: #7d879c;
+    @include hover{color: $theme-link-hover-color}
+  }
+  li:not(:last-child) a{padding-right: 15px;margin-right: 15px;}
+
+  li:not(:last-child) a:after{
+    @include size(1px, 16px);
+    background-color: $theme-light-line-color;
+    @include position(absolute, $content: '', $top: 50%, $right: 0, $bottom: 50%)
+  }
+}
+
+.list-breadcrumb{
+  display: block;
+  a, span{
+    display: inline-block;
+    color: $theme-light-color;
+    line-height: 1.8;
+
+    i{color: rgba(255, 255, 255, 0.5); margin-right: 5px;}
+  }
+  a:hover{
+    color: $theme-link-hover-color;
+  }
+
+  a:not(:last-child):after{
+    @include position(relative, $content: '\f105');
+    @include size(20px);
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;    
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+  }
+}
+.list-categories a{
+  color: $theme-font-color;
+  margin-bottom: 6px;
+  display: block;
+
+  @include hover{color: $theme-link-hover-color;}
+}
+
+.list-social-icons a{
+  @include size(30px);
+  text-align: center;
+}
+
+.card-body{
+  p:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.card-item{
+  &-date{
+    margin-right: 1.25rem;
+    text-align: center;
+  }
+  &-badge{@include position(absolute, $top: 20px, $left: 20px);}
+}
+
+.divider-space-30{height: 30px;}
+.divider-space-60{height: 60px;}
+
+.section-gap{
+  &-60{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  &-60-30{
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+
+.section-title{
+  &-md{margin-bottom: 40px;
+
+    h3{
+      @include font-size(36px);
+    }
+  }
+}
+
+.subscription-group{
+  background-color: $theme-light-color;
+  border-radius: .25rem;
+  overflow: hidden;
+
+  .form-control{
+    background-color: transparent;
+    border: none;
+  }
+  .btn{
+    @include border-left-radius(0);
+    border: 0;
+  }
+}
+.section-margin-top{
+  position: relative;
+  margin-top: -60px;
+  z-index: 3;
+}
+
+.select-option-arrow{
+  position: relative;
+  @include after{
+    @include flexbox;
+    @include size(30px, 20px);
+    @include font-size(20px);
+    @include justify-content(center);
+    @include align-items(center);
+    @include position($content: '\f107', $right: 3px, $top: 50%, $zIndex: 9);
+    background-color: $light;
+    color: $theme-primary-color
+  }
+}
+
+.max-w-300{
+  max-width: 300px;
+}
+
+@include media-breakpoint-up(md){
+  .max-w-md-300{max-width: 300px;}
+}
+.text-light-300{color: rgba(255, 255, 255, 0.7) !important;}
+.text-dark-300{color: #7d879c !important;}
+
+

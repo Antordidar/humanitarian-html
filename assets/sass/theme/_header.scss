@@ -1,0 +1,131 @@
+/*//=============================
+=============|| HEADER ||=========================================================================*/
+.header{
+	position: relative;
+	&-fixed-top{
+		@include position(fixed, $top: 0, $left: 0, $right: 0);
+	}
+	
+	nav.navbar{
+		@include box-shadow(0 4px 12px 0 rgba(0, 0, 0, 0.04));
+		z-index: 99999;
+	}
+	.navbar-brand img,
+	.navbar-brand svg{
+		max-height: 80px;
+		@media (max-width: 667px){
+			max-height: 50px;
+		}
+	}
+
+	.navbar-nav .nav-link{
+		color: $theme-font-color;
+		font-size: 18px;
+
+		&:hover, &.active{
+			color: $theme-danger-color;
+		}
+		@media (min-width: 991px){	
+			margin-left: 25px;
+		}
+	}
+	&-nav-cart{
+		position: relative;
+		cursor: pointer;
+		display: inline-block;
+
+		@media (min-width: 991px){
+			&:before{
+				@include position(absolute, $top: 50%, $left: 0, $content: '');
+				@include size(1px, 20px);
+				background-color: $theme-light-line-color;
+			}
+		}
+
+		&-icon{
+			position: relative;
+			@include flexbox();
+			@include size(40px);
+			@include align-items(center);
+			@include justify-content(center);
+			box-sizing: border-box;
+			background-color: $light;
+			@include border-radius(50px);
+			@include transition();
+
+			@include hover{
+				background-color: rgba($theme-danger-color, 0.2);
+			}
+		}
+		&-count{
+			@include position(absolute, $top: -6px, $right: -6px);
+			background-color: $theme-danger-color;
+			color: $light;
+			@include border-radius(50px);
+			display: inline-block;
+			min-width: 20px;
+			text-align: center;
+			font-size: 13px;
+		}
+	}
+	.fixed-top{
+		@include animation(header_animation, .4s, 1);
+	}
+}
+
+/*//=============================
+=============|| TOGGLER BUTTON ||=========================================================================*/
+.navbar-toggler {
+	border: none;
+	margin-right: 10px;
+
+	span {
+		display: block;
+		width: 25px;
+		height: 2px;
+		background: $theme-dark-color;
+		margin: auto;
+		margin-bottom: 5px;
+		@include transition($transition-base);
+		cursor: pointer;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&[aria-expanded="false"] span:nth-child(2) {
+		opacity: 1;
+	}
+
+	&[aria-expanded="true"] span:nth-child(2) {
+		opacity: 0;
+	}
+
+	&[aria-expanded="true"] span:first-child {
+		@include transform(rotate(-45deg));
+		position: relative;
+		top: 7.5px;
+	}
+
+	&[aria-expanded="true"] span:last-child {
+		@include transform(rotate(45deg));
+		bottom: 6px;
+		position: relative;
+	}
+}
+
+@media(max-width: 1199px){
+	.navbar-collapse{
+		background-color: $theme-dark-color;
+		padding : 10px 20px;
+		margin :0px -15px;
+
+		.nav-item a, .nav-link{
+			color: $light !important;
+		}
+		.dropdown-menu{
+			background-color: rgba($theme-dark-color, 0.6);
+		}
+	}
+}

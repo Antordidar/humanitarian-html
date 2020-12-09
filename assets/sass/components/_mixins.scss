@@ -1,0 +1,392 @@
+//================ SASS Mixins ================*/
+//============================================================================*/
+$maxcount: 200;
+$mincount: 0;
+$offset: 5;
+$unit: 'px'; // Feel free to change the unit.
+
+@mixin list-loop(
+   $className,
+   $styleName, 
+   $max        :$maxcount, 
+   $offset     :$offset, 
+   $min        : $mincount) {
+   $i          : $min;
+  @while $i <= $max {
+    #{$className + $i} { 
+      #{$styleName}: #{$i + $unit} !important;
+    }
+    $i: $i + $offset;
+  }
+}
+
+@mixin stroke-text($size: 1px, $fill:$white, $stroke: $black){
+  color: $stroke;
+  -webkit-text-fill-color: $fill; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: $size;
+  -webkit-text-stroke-color: $stroke;
+}
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, $white,  50%)) {
+   // For Google Chrome
+   &::-webkit-scrollbar {
+      @include size($size);
+   } 
+   &::-webkit-scrollbar-thumb {
+     background: $foreground-color;
+   } 
+   &::-webkit-scrollbar-track {
+     background: $background-color;
+   } 
+   // For Internet Explorer
+   & {
+     scrollbar-face-color: $foreground-color;
+     scrollbar-track-color: $background-color;
+   }
+ }
+
+@mixin position(
+   $position      : null, 
+   $top           : null, 
+   $right         : null, 
+   $bottom        : null, 
+   $left          : null, 
+   $content       : null, 
+   $font-family   : null, 
+   $zIndex        : null, 
+   $fontSize      : null, 
+   $width         : null, 
+   $height        : null) {
+
+   right          : $right;
+   bottom         : $bottom;
+   left           : $left;
+   font-size      : $fontSize;
+   width          : $width;
+   height         : $height;
+   z-index        : $zIndex;
+
+   @if $position == "fixed-top"{
+      position    : fixed;
+      top         : 0;
+      left        : 0;
+      right       : 0
+   }
+   @if $position == "y"{
+      position    : absolute;
+      top         : 50%;
+      @include transform(translateY(-50%));
+   }
+   @if $position == "x"{
+      position    : absolute;
+      left        : 50%;
+      @include transform(translateX(-50%));
+   }
+   @if $position == "both"{
+      position    : absolute;
+      top         :50%;
+      left        :50%;
+      @include transform(translate(-50%,-50%));
+   }@else{
+      position    : $position;
+   }
+   @if $content && $font-family == null{
+      content     : $content;
+      font-family : "Font Awesome 5 Pro",;
+   }@else{
+      content     : $content;
+   }
+   @if $font-family{
+      font-family : $font-family;
+   }   
+   @if $top==50% {
+      top         : 50%;
+      @include transform(translateY(-50%));
+   }@else {
+      top         : $top;
+   }
+}
+
+// Terrible name for mixin by the way.
+@mixin selection($bgColor: $theme-color, $color: $white){
+   *::-moz-selection {
+      background: $bgColor;
+      color: $color;
+      text-shadow: none;
+   }
+   ::-moz-selection {
+      background: $bgColor;
+      color: $color;
+      text-shadow: none;
+   }
+   ::selection {
+      background: $bgColor;
+      color: $color;
+      text-shadow: none;
+   }
+}
+
+@mixin transform($transform: translate(-50%, -50%)) {
+   -webkit-transform: $transform;
+   -moz-transform: $transform;
+   -o-transform: $transform;
+   transform: $transform;
+}
+
+// @mixin transition-duration($duration...) {
+//    -webkit-transition-duration: $duration;
+//    -moz-transition-duration: $duration;
+//    -o-transition-duration: $duration;
+//    transition-duration: $duration;
+// }
+
+// @mixin transition-delay($delay...) {
+//    -webkit-transition-delay: $delay;
+//    -moz-transition-delay: $delay;
+//    -o-transition-delay: $delay;
+//    -ms-transition-delay: $delay;
+//    transition-delay: $delay;
+// }
+
+// @mixin transition-property($property...) {
+//    -webkit-transition-property: $property;
+//    -moz-transition-property: $property;
+//    -o-transition-property: $property;
+//    transition-property: $property;
+// }
+
+// @mixin animation($animation...) {
+//    -webkit-animation: $animation;
+//    -moz-animation: $animation;
+//    -o-animation: $animation;
+//    animation: $animation;
+// }
+
+// @mixin animation-delay($delay...) {
+//    -webkit-animation-delay: $delay;
+//    -moz-animation-delay: $delay;
+//    -o-animation-delay: $delay;
+//    -ms-animation-delay: $delay;
+//    animation-delay: $delay;
+// }
+
+// @function px($point) {
+//    @return #{$point*1.333333}px;
+// }
+
+
+// @mixin display-block() {//[@include display-block;]
+//    display: block;
+//    vertical-align: middle;
+// }
+
+// @mixin inline-block() {//[@extend inline-block;]
+//    display: inline-block;
+//    vertical-align: middle;
+// }
+
+@mixin flexbox() {// Flexbox display
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  // necessary for ie10
+  width: 100%;
+}
+
+@mixin justify-content($justify) {//Justify-content
+   -webkit-justify-content: $justify;
+   -moz-justify-content: $justify;
+   -ms-justify-content: $justify;
+   justify-content: $justify;
+   -ms-flex-pack: $justify;
+}
+
+@mixin align-items($align) {
+   -webkit-box-align: $align;
+   -ms-flex-align: $align;
+   -webkit-align-items: $align;
+   -moz-align-items: $align;
+   align-items: $align;
+}
+
+@mixin flex-order($order){
+   -webkit-box-ordinal-group: $order; // old
+   -moz-box-ordinal-group: $order; // old
+   -ms-flex-order: $order; // ie
+   -webkit-order: $order; // new
+   order: $order; // new
+}
+
+@mixin flex-wrap($wrap: wrap){
+   -ms-flex-wrap: $wrap; // ie
+   -webkit-flex-wrap: $wrap; // new
+   flex-wrap: $wrap; // new
+}
+
+@mixin box-shadow($shadow...) {   
+   @if (length($shadow) > 0) {
+      box-shadow: $shadow;
+   }@else{
+      box-shadow: $shadow-base;
+   }
+}
+ 
+@mixin text-shadow( $top: 3px, $left: 3px, $blur: 3px , $colour: #333 ) {
+   -webkit-text-shadow:$top $left $blur $colour; 
+   -moz-text-shadow:$top $left $blur $colour; 
+   -o-text-shadow:$top $left $blur $colour; 
+   text-shadow:$top $left $blur $colour; 
+}
+
+@mixin opacity($opacity) {//[@include opacity(.5);]
+   opacity: $opacity;
+   $opacity-ie: $opacity * 100;
+   filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+  // Toggle visibility + opacity + pointer-events
+  // @param {Boolean} $state - Switch visibility "on" `(true)` or "off" `(false)`. Defaults to `true`.
+  @mixin visible($isVisible: true) {
+   @if ($isVisible) {
+     opacity: 1;
+     visibility: visible;
+     pointer-events: auto;
+   } @else {
+     opacity: 0;
+     visibility: hidden;
+     pointer-events: none;
+   }
+ }
+ 
+ @mixin visually-hidden() {
+   // sass-lint:disable no-important
+   position: absolute !important;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   height: 1px;
+   width: 1px;
+   margin: -1px;
+   padding: 0;
+   border: 0;
+ }
+ 
+ @mixin visually-shown() {
+   // sass-lint:disable no-important
+   position: inherit !important;
+   overflow: auto;
+   clip: auto;
+   width: auto;
+   height: auto;
+   margin: 0;
+ }
+ 
+@mixin placeholder {
+   &.placeholder { @content; }
+   &:-moz-placeholder { @content; }
+   &::-moz-placeholder { @content; }
+   &::-webkit-input-placeholder { @content; }
+}
+
+@mixin before {
+   &::before {
+      position: absolute;
+      content: '';
+      @content;
+   }
+}
+@mixin after {
+   &::after {
+      position: absolute;
+      content: '';
+      @content;
+   }
+}
+
+@mixin radial-gradient($direction, $gradients...) {
+   background: -webkit-radial-gradient(ellipse farthest-side at $direction, $gradients);
+   background: -moz-radial-gradient(ellipse farthest-side at $direction, $gradients);
+   background: -o-radial-gradient(ellipse farthest-side at $direction, $gradients);
+   background: radial-gradient(ellipse farthest-side at $direction, $gradients);
+}
+
+@mixin filter ($filter-value) {
+   -webkit-filter: ($filter-value);
+   -moz-filter: ($filter-value);
+   -ms-filter: ($filter-value);
+   -o-filter: ($filter-value);
+   filter: ($filter-value);
+}
+
+@mixin CustomKeyframes($animation-name) {
+   @-webkit-keyframes #{$animation-name} {@content;}
+   @-moz-keyframes #{$animation-name} {@content;}
+   @-o-keyframes #{$animation-name} {@content;}
+   @keyframes #{$animation-name} {@content;}
+}
+
+@mixin keyframes_animation ($args) {
+   -webkit-animation: $args;
+   -moz-animation: $args;
+   -o-animation: $args;
+   animation: $args;
+}
+
+@mixin arrow ($direction, $size, $color) {
+   @if $direction==up {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid $color;
+   }
+
+   @else if $direction==down {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-top: $size solid $color;
+   }
+
+   @else if $direction==right {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-left: $size solid $color;
+   }
+
+   @else if $direction==left {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-right: $size solid $color;
+   }
+}
+
+
+@mixin overlay($color : $blakc, $opacity : 0.7, $zIndex: 0) {
+   position: relative;
+   z-index: $zIndex;
+
+   @include after{
+      @include position($top: 0, $left: 0, $zIndex: -1);
+      @include size(100%);
+      background-color: $color;
+      @include opacity($opacity);      
+   }
+}
+
+@mixin disable-selection() {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+@mixin unstyled-button {
+   appearance: none;
+   margin: 0;
+   padding: 0;
+   background: none;
+   border: none;
+   font-size: inherit;
+   line-height: inherit;
+   cursor: pointer;
+}

@@ -22,11 +22,11 @@
 	$(window).on('scroll', function () {
 		var scroll = $(window).scrollTop();
 		if (scroll < 245) {
-			$("#sticky-header").removeClass("sticky-menu");
+			$("#sticky-header").removeClass("fixed-top");
 			$('.scroll-to-target').removeClass('open');
 
 		} else {
-			$("#sticky-header").addClass("sticky-menu");
+			$("#sticky-header").addClass("fixed-top");
 			$('.scroll-to-target').addClass('open');
 		}
 	});
@@ -137,6 +137,17 @@
 		});
 		wow.init();
 	}
+
+	$('#view-input-password').on('click', function(e) {
+		var passwordFeild = $("#passwordLabel");
+        var passwordFeildType = passwordFeild.attr('type');
+		if (passwordFeildType == 'password') {
+			passwordFeild.attr('type', 'text');
+		}
+		else {
+			passwordFeild.attr('type', 'password');
+		}
+	})
 
 
 })(jQuery);

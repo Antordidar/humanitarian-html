@@ -1,0 +1,20 @@
+.authenticated-page{@include size(100%, 100vh);
+    .form-control{background-color: #F3F3F3;}
+    .form-password-box-input{position: relative;}
+    #view-input-password{@include position(absolute, $top: 50%, $right: 15px);cursor: pointer;}
+}
+
+
+// Responsive
+@include media-breakpoint-up(md){
+    .authenticated-page-banner{height: 100vh}
+    .header-area-area-minus{
+		height: calc(100vh - 100px) !important;
+    }
+    .display-404{font-size: 300px;}
+}
+
+@include media-breakpoint-down(md){
+    .authenticated-page-banner{height: 20vh}
+    .display-404{font-size: 150px;}
+}

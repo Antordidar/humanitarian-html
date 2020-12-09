@@ -1,0 +1,55 @@
+/*//=============================
+=============|| BANNER ||=========================================================================*/
+.hero-area{
+    background-color: $theme-light-color;
+
+    .single-slider{
+        outline: none;
+        @include media-breakpoint-up(lg){
+            height: 60vh;
+        }
+    }
+    &-image img{
+        @include media-breakpoint-down(lg){
+            margin: auto;
+        }
+    }
+    &-content-area{
+        @include media-breakpoint-down(lg){
+            padding-top: 30px;
+            text-align: center;
+        }
+    }
+    &-title{
+        @include font-size(40px);
+        
+        @include media-breakpoint-down(sm){
+            @include font-size(26px);
+        }
+    }
+    .slick-dots{
+        text-align: center;
+        @include position(absolute, $bottom: 0, $left: 0, $right:0);
+
+        li{
+            display: inline-block;
+
+            button{
+                position: relative;
+                border: none;
+                display: inline-block;
+                text-indent: 99px;
+                background-color: #d8d8d8;
+                overflow: hidden;
+                margin: 5px;
+                @include size(10px, 12px);
+                @include border-radius(15px);
+                @include transition($transition-fade);
+
+            }
+            &.slick-active button{
+                background-color: $theme-primary-color;
+            }
+        }
+    }
+}
