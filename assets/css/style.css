@@ -335,6 +335,7 @@
 =============|| BUTTON STYLE ||=========================================================================*/
 .btn-primary {
   background-color: #585fcb !important;
+  border-color: #585fcb !important;
 }
 
 .btn-outline-primary {
@@ -349,6 +350,7 @@
 
 .btn-success {
   background-color: #009e74 !important;
+  border-color: #009e74 !important;
 }
 
 .btn-outline-success {
@@ -363,6 +365,7 @@
 
 .btn-danger {
   background-color: #fe696a !important;
+  border-color: #fe696a !important;
 }
 
 .btn-outline-danger {
@@ -377,6 +380,7 @@
 
 .btn-warning {
   background-color: #ffcb47 !important;
+  border-color: #ffcb47 !important;
 }
 
 .btn-outline-warning {
@@ -391,6 +395,7 @@
 
 .btn-info {
   background-color: #14afb4 !important;
+  border-color: #14afb4 !important;
 }
 
 .btn-outline-info {
@@ -405,6 +410,7 @@
 
 .btn-dark {
   background-color: #373f50 !important;
+  border-color: #373f50 !important;
 }
 
 .btn-outline-dark {
@@ -419,6 +425,7 @@
 
 .btn-purple {
   background-color: #674df0 !important;
+  border-color: #674df0 !important;
 }
 
 .btn-outline-purple {

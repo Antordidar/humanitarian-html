@@ -207,7 +207,9 @@ label {
   &-light-300{color: rgba(255, 255, 255, 0.7) !important;}
   &-dark-300{color: #7d879c !important;}
 }
-
+.font{
+  @include list-loop('&-size-', 'font-size', 30, 1, 10);
+}
 // BOX SHADOW
 .shadow{
   @include box-shadow(0 0 25px -3px rgba(0, 0, 0, 0.1) !important);
@@ -243,7 +245,11 @@ dl dd {font-weight: 300;}
 		-moz-box-shadow: none;
 		box-shadow: none;
     outline: 0;		
-	}
+  }
+  
+  @include placeholder{
+    color: #aeb4be;
+  }
 }
 
 .column-center {
@@ -323,11 +329,11 @@ dl dd {font-weight: 300;}
 
 .divider-space-30{height: 30px;}
 .divider-space-60{height: 60px;}
-.line-height-4{line-height: 1.6;}
-.line-height-5{line-height: 1.6;}
+.line-height-4{line-height: 1.4;}
+.line-height-5{line-height: 1.5;}
 .line-height-6{line-height: 1.6;}
-.line-height-7{line-height: 1.6;}
-.line-height-8{line-height: 1.6;}
+.line-height-7{line-height: 1.7;}
+.line-height-8{line-height: 1.8;}
 
 .section-gap{
   &-60{

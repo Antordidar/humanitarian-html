@@ -343,6 +343,90 @@ label {
   color: #7d879c !important;
 }
 
+.font-size-10 {
+  font-size: 10px !important;
+}
+
+.font-size-11 {
+  font-size: 11px !important;
+}
+
+.font-size-12 {
+  font-size: 12px !important;
+}
+
+.font-size-13 {
+  font-size: 13px !important;
+}
+
+.font-size-14 {
+  font-size: 14px !important;
+}
+
+.font-size-15 {
+  font-size: 15px !important;
+}
+
+.font-size-16 {
+  font-size: 16px !important;
+}
+
+.font-size-17 {
+  font-size: 17px !important;
+}
+
+.font-size-18 {
+  font-size: 18px !important;
+}
+
+.font-size-19 {
+  font-size: 19px !important;
+}
+
+.font-size-20 {
+  font-size: 20px !important;
+}
+
+.font-size-21 {
+  font-size: 21px !important;
+}
+
+.font-size-22 {
+  font-size: 22px !important;
+}
+
+.font-size-23 {
+  font-size: 23px !important;
+}
+
+.font-size-24 {
+  font-size: 24px !important;
+}
+
+.font-size-25 {
+  font-size: 25px !important;
+}
+
+.font-size-26 {
+  font-size: 26px !important;
+}
+
+.font-size-27 {
+  font-size: 27px !important;
+}
+
+.font-size-28 {
+  font-size: 28px !important;
+}
+
+.font-size-29 {
+  font-size: 29px !important;
+}
+
+.font-size-30 {
+  font-size: 30px !important;
+}
+
 .shadow {
   box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.1) !important;
   transition: all 0.2s ease-in-out;
@@ -456,6 +540,22 @@ dl dd {
   outline: 0;
 }
 
+.form-control.placeholder {
+  color: #aeb4be;
+}
+
+.form-control:-moz-placeholder {
+  color: #aeb4be;
+}
+
+.form-control::-moz-placeholder {
+  color: #aeb4be;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #aeb4be;
+}
+
 .column-center {
   float: none;
   margin: 0 auto;
@@ -563,11 +663,11 @@ dl dd {
 }
 
 .line-height-4 {
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 .line-height-5 {
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .line-height-6 {
@@ -575,11 +675,11 @@ dl dd {
 }
 
 .line-height-7 {
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .line-height-8 {
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .section-gap-60 {

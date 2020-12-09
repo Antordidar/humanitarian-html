@@ -1,11 +1,12 @@
 //================ SASS Mixins ================*/
 //============================================================================*/
 $maxcount: 200;
+$mincount: 0;
 $offset_number: 5;
 $unit: 'px'; // Feel free to change the unit.
 
-@mixin list-loop($className, $styleName, $max:$maxcount, $offset:$offset_number) {
-  $i: 0;
+@mixin list-loop($className, $styleName, $max:$maxcount, $offset:$offset_number, $min: $mincount) {
+  $i: $min;
   @while $i <= $max {
     #{$className + $i} { 
       #{$styleName}: #{$i + $unit} !important;
