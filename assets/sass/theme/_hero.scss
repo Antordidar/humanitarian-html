@@ -2,12 +2,10 @@
 =============|| BANNER ||=========================================================================*/
 .hero-area{
     background-color: $theme-light-color;
+    padding: 30px 0;
 
     .single-slider{
-        outline: none;
-        @include media-breakpoint-up(lg){
-            height: 60vh;
-        }
+        outline: none;  
     }
     &-image img{
         @include media-breakpoint-down(lg){

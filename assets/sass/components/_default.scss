@@ -147,8 +147,8 @@ hr {
     margin-right: 10px;
     position: relative;
 
-    @include list-loop('&-w-', 'width', 70, 10, 30);
-    @include list-loop('&-h-', 'height', 70, 10, 30);
+    @include list-loop('&-w-', 'width', 150, 10, 30);
+    @include list-loop('&-h-', 'height', 150, 10, 30);
 }
 .list-inline li, .list-inline li a{display: inline-block;}
 .list-pagination{

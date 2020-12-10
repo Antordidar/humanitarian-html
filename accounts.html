@@ -28,9 +28,9 @@
 	<!--||=============================
 	=============||Header Section|| ===================================================-->
 	<header class="header">
-		<nav class="navbar navbar-expand-xl navbar-light bg-white" id="sticky-header">
+		<nav class="navbar navbar-expand-xl py-0 navbar-light bg-white" id="sticky-header">
 			<div class="container">
-				<a class="navbar-brand py-0" href="#"><img src="assets/img/logo.png" alt=""></a>
+				<a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt=""></a>
 
 				<button class="navbar-toggler ml-auto pr-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="bar-icon"></span>
@@ -57,133 +57,123 @@
 		  </nav>
 	</header>
 
+
     <!--||=============================
     =============|| Hero-Banner-Image ||===========================================================-->
-    <div class="hero-area-banner bg-primary py-5">
+    <div class="hero-area-banner min-h-250 bg-primary py-5">
 		<div class="container">
-			<div class="row align-items-center">
+			<div class="row align-items-start">
 				<div class="col-lg-5">
-					<h3 class="text-white mb-lg-0 mb-3">Gallery Events</h3>
+					<div class="user-profile-header mb-3 d-flex">
+						<div class="avatar avatar-h-110 avatar-w-110 mr-4">
+							<img src="https://via.placeholder.com/150x150" class="rounded-circle" alt="">
+						</div>
+						<div class="use-profile-header-content">
+							<h3 class="text-white mb-lg-0 mb-3">Jhone Doe</h3>
+							<p class="text-white">johndoe123@gmail.com</p>
+							<button class="btn btn-danger px-4">Log Out</button>
+
+						</div>
+					</div>
 				</div>
 				<div class="col-lg-7">
-					<nav class="list-breadcrumb text-left text-lg-right">
+					<nav class="list-breadcrumb mb-3 text-left text-lg-right">
 						<a href="#"><i class="fal fa-home" aria-hidden="true"></i> Home</a>
-						<a href="#">Gallery Events</a>
-						<span>Humanitarina Arts Event</span>
+						<span>Our Stories</span>
 					</nav>
 				</div>
 			</div>	
 		</div>
 	</div>
-	<div class="divider-space-60"></div>
-
+	
     <!--||=============================
-    =============|| Regular slider Section ||===========================================================-->
-    <section class="event-details-area">
+    =============|| Accounts Profile Section ||===========================================================-->
+    <section class="user-account-area mt-n5">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
-					<div class="event-details-area-content mb-5">
-						<img class="event-featured-image mb-4 rounded" src="assets/img/event-details.png" alt="">
-						<!-- Event Title -->
-						<h2 class="mb-4 text-capitalize">Humanitarina Arts Event</h2>
-
-						<div class="event-details-info d-flex align-items-center justify-content-between mb-4">
-							<span>July 23, 2020</span>
-							<ul class="list-social-icons list-inline">
-								<li class="align-top">Share</li>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+				<div class="col-lg-4">
+					<div class="user-account-author-details h-100 bg-white rounded p-4 shadow">
+						<div class="user-author-content-box h-100 d-flex flex-column">
+							<h5 class="mb-4">Personal Details</h5>
+							<ul class="list-block user-details-list-block">
+								<li class='mb-3'><i class="fal fa-envelope mr-2" aria-hidden="true"></i>johndoe123@gmail.com</li>
+								<li class='mb-3'><i class="fal fa-map-marker-smile mr-2" aria-hidden="true"></i>123, York street, Dallas Taxas, USA</li class="line-height-7">
+								<li class='mb-3'><i class="fal fa-phone mr-2" aria-hidden="true"></i>+(11) 111 1111 1111</li class="line-height-7">
 							</ul>
-						</div>
-						<div class="event-details-body">
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-							<p>But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-							<h5>Lorem Ipsum</h5>
-							<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-							<h5>Lorem Ipsum</h5>
-							<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-							<ul class="mb-3 list-block">
-								<li>•	Lorem Ipsum is simply </li>
-								<li>•	But also the leap into electronic typesetting,</li>
-								<li>•	Lorem Ipsum is simply dummy text of the printing. </li>
-								<li>• 	But also the leap into electronic typesetting,</li>
-								<li>• 	Lorem Ipsum is simply dummy text of the printing.</li>
-							</ul>
-							<h5>Lorem Ipsum</h5>
-							<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+							<div class="buttom-button-area mt-auto">
+								<button class="btn btn-block btn-danger">Edit Details</button>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<!-- Author -->
-					<div class="author-card">
-						<div class="author-card-header mb-2 d-flex">
-							<img src="assets/img/author.png" class="img-thumbnail rounded-circle mr-3 avatar-h-70" alt="">
-							<div class="author-card-title">
-								<h4 class="text-dark-300">Cynthia Gomez</h4>
-								<p>Host</p>
-							</div>
-						</div>
-						<div class="author-card-content">
-							<p>Typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-							<a href="#">View Profile</a>
+				<div class="col-lg-8">
+					<div class="user-account-order-details h-100 rounded p-4 shadow bg-white">
+						<h5 class="mb-4">Order Details</h5>
+						<div class="table-orders">
+							<table class="table-md w-100">
+								<thead>
+									<tr>
+										<th>Order</th>
+										<th>Date</th>
+										<th>Payment Status</th>
+										<th>Fullfilment Status</th>
+										<th>Total</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-primary">#1234</td>
+										<td>Sep 22, 2020</td>
+										<td>Authorized</td>
+										<td>Unfullfiled</td>
+										<td>$113.00</td>
+									</tr>
+									<tr>
+										<td class="text-primary">#1234</td>
+										<td>Sep 22, 2020</td>
+										<td>Authorized</td>
+										<td>Unfullfiled</td>
+										<td>$113.00</td>
+									</tr>
+									<tr>
+										<td class="text-primary">#1234</td>
+										<td>Sep 22, 2020</td>
+										<td>Authorized</td>
+										<td>Unfullfiled</td>
+										<td>$113.00</td>
+									</tr>
+									<tr>
+										<td class="text-primary">#1234</td>
+										<td>Sep 22, 2020</td>
+										<td>Authorized</td>
+										<td>Unfullfiled</td>
+										<td>$113.00</td>
+									</tr>
+									<tr>
+										<td class="text-primary">#1234</td>
+										<td>Sep 22, 2020</td>
+										<td>Authorized</td>
+										<td>Unfullfiled</td>
+										<td>$113.00</td>
+									</tr>
+									<tr>
+										<td class="text-primary">#1234</td>
+										<td>Sep 22, 2020</td>
+										<td>Authorized</td>
+										<td>Unfullfiled</td>
+										<td>$113.00</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
-					
-					<hr class="dark">
-					
-					<div class="categoties-box">
-						<h4>Gallery Event categories</h4>
-						<ul class="list-block list-categories">
-							<li><a href="#">Adventures</a></li>
-							<li><a href="#">Artisan Updates</a></li>
-							<li><a href="#">How it's made</a></li>
-							<li><a href="#">Artisan Profile</a></li>
-							<li><a href="#">Culture</a></li>
-							<li><a href="#">History</a></li>
-						</ul>
-					</div>
-
-					<hr class="dark">
-
-					<div class="upcoming-events-area">
-						<h4 class="mb-4">Upcomming Events</h4>
-						<!-- single Item -->
-						<div class="upcoming-events-item mb-3 d-flex">
-							<img src="assets/img/events-thumb-1.png" class="avatar avatar-h-60 mr-3" alt="">
-							<div class="upcoming-events-item-content">
-								<h5><a href="#">Retro cameras are trending. Why so popular?</a></h5>
-								<p class="small">by <a class="text-dark-300" href="#">Andy Williams</a></p>
-							</div>
-						</div>
-						<!-- single Item -->
-						<div class="upcoming-events-item mb-3 d-flex">
-							<img src="assets/img/events-thumb-1.png" class="avatar avatar-h-60 mr-3" alt="">
-							<div class="upcoming-events-item-content">
-								<h5><a href="#">Retro cameras are trending. Why so popular?</a></h5>
-								<p class="small">by <a class="text-dark-300" href="#">Andy Williams</a></p>
-							</div>
-						</div>
-						<!-- single Item -->
-						<div class="upcoming-events-item mb-3 d-flex">
-							<img src="assets/img/events-thumb-1.png" class="avatar avatar-h-60 mr-3" alt="">
-							<div class="upcoming-events-item-content">
-								<h5><a href="#">Retro cameras are trending. Why so popular?</a></h5>
-								<p class="small">by <a class="text-dark-300" href="#">Andy Williams</a></p>
-							</div>
-						</div>
-					</div>
-
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<div class="divider-space-30"></div>
-	
+	<div class="divider-space-60"></div>
+
 	<!--||=============================
 	=============||Footer Section|| ===================================================-->
 	<footer class="footer-area bg-dark pt-5">
@@ -261,7 +251,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12"><hr class='light'></div>
+					<div class="col-md-12"><hr></div>
 				</div>
 			</div>
 		</div>
@@ -285,6 +275,7 @@
 			</div>
 		</div>
 	</footer>
+
 
 	<!--||=============================
 =============|| First jQuery Js, then proper Js, then Bootstrap and others =====-->

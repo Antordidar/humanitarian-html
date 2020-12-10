@@ -18,3 +18,49 @@
     .authenticated-page-banner{height: 20vh}
     .display-404{font-size: 150px;}
 }
+.table-orders{
+    width: 100%;
+    overflow-x: auto;
+    thead{
+        border-bottom : 1px solid $border-color;
+        tr th{
+            padding-bottom: 15px;
+            color: $theme-dark-color;
+            white-space: nowrap;
+        }
+    }
+    tbody tr td{
+        padding-top: 15px;
+        white-space: nowrap;
+    }
+    thead tr th:not(:last-child), 
+    tbody tr td:not(:last-child){
+        padding-right: 15px;
+    }
+    @include media-breakpoint-down(md){
+        thead tr th, tbody tr td{
+            font-size: 13px;
+        }
+    }
+}
+
+.min-h-250{
+    min-height: 250px;
+}
+
+@include media-breakpoint-up(lg){
+    .user-address-item-list{
+        li:nth-child(odd){
+            padding-right: 80px;
+            position: relative;
+            @include after{
+                background: $border-color;
+                @include size(1px, 80%);
+                @include position($right: 0, $top: 50%);
+            }
+        }
+        li:nth-child(even){
+            padding-left: 80px;
+        }
+    }
+}

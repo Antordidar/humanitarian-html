@@ -33,11 +33,6 @@
 
 
 	/*=============================================
-		=    		Nice Select 			      =
-	=============================================*/
-	$('.nice-select').niceSelect();
-
-	/*=============================================
 		=    		 Main Slider		      =
 	=============================================*/
 	function mainSlider() {
@@ -82,33 +77,6 @@
 		}
 	}
 
-
-	/*=============================================
-		=    		Slick Regular slider	     =
-	=============================================*/
-	$(".regular-slider").slick({
-		arrows: false,
-		dots: true,
-		infinite: true,
-		slidesToShow: 3,
-		slidesToScroll: 2,
-		responsive: [
-			{
-				breakpoint: 991,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1
-				}
-			},
-			{
-				breakpoint: 640,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-			}
-		]
-	});
 
 	/*=============================================
 		=    		 Aos Active  	         =
