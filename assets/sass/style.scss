@@ -194,3 +194,37 @@ $theme-colors: (
 .text-dark-300{color: #7d879c !important;}
 
 
+.order-table-cover{
+  thead tr th{
+    padding-bottom: 10px;
+    color: $theme-dark-color;
+    white-space: nowrap;
+    border-bottom: 1px solid $border-color;
+  }
+  tbody tr td {
+    padding-top: 15px;
+    white-space: nowrap;
+
+    @include media-breakpoint-down(md){
+      font-size: 13px;
+    }
+  }
+  thead tr th:not(:last-child),
+  tbody tr td:not(:last-child),
+  tfoot tr td:not(:last-child){
+    padding-right: 15px;
+  }
+
+  tbody tr:last-child td{
+    padding-bottom: 15px;
+  }
+  tfoot tr td{
+    border-top: 1px solid $border-color;
+    padding-top: 15px;
+    white-space: nowrap;
+  }
+}
+
+.overflow-x-auto{
+  overflow-x: auto !important;
+}
