@@ -24,8 +24,10 @@ a:hover{
 a, button {
 	color: $theme-link-color;
 	outline: medium none;}
-button:focus,input:focus,input:focus,textarea,textarea:focus{
-    outline: 0}
+button:focus,input:focus,input:focus,textarea,textarea:focus, .form-control:focus{
+    outline: 0;
+    box-shadow: none;}
+
 h1, h2, h3, h4, h5, h6 {
     color: $theme-dark-color;
     font-family: $secondary-fonts;
@@ -140,6 +142,8 @@ hr {
 
     &.dark{border-color: $theme-line-color;}
     &.light{border-color: rgba($theme-border-color, .7);}
+    &.size-10{margin: 10px 0;}
+    &.size-20{margin: 20px 0;}
 }
 
 // Avatar Size
@@ -182,8 +186,7 @@ hr {
 }
 
 .primary-fonts{
-    font-family: $primary-fonts;
-}
+    font-family: $primary-fonts;}
+
 .secondary-fonts{
-    font-family: $secondary-fonts;
-}
+    font-family: $secondary-fonts;}

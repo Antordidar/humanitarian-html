@@ -28,3 +28,7 @@
 14# sign-up-Page => http://antordidar.github.io/humanitarian-html/sign-up.html
 
 15# order-Page => http://antordidar.github.io/humanitarian-html/order.html
+
+16# cart-checkout-Page => http://antordidar.github.io/humanitarian-html/cart.html
+
+16# masterpieces-Page => http://antordidar.github.io/humanitarian-html/masterpieces.html

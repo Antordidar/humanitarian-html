@@ -23,10 +23,11 @@ $secondary-fonts: 'Helvetica-Bold';
 // COLOR VARIABLES
 $theme-primary-color    : #585fcb !default;
 $theme-danger-color     : #FE696A !default;
+$theme-warning-color    : #FEA569 !default;
 $theme-dark-color       : #373f50 !default;
 
 
-$theme-light-color      : #fbfbfb !default;
+$theme-light-color      : #f6f9fc !default;
 
 $theme-font-color       : #4b566b !default;
 $theme-footer-bg-color  : #2B3445 !default;
@@ -41,6 +42,8 @@ $theme-colors: (
   "primary"             : $theme-primary-color,
   "danger"              : $theme-danger-color,
   "dark"                : $theme-dark-color,
+  "light"               : $theme-light-color,
+  "warning"             : $theme-warning-color,
 );
 
 
@@ -57,6 +60,23 @@ $theme-colors: (
 
 
 
+
+
+
+// BOX SHADOW CSS
+//--------------------------------------------------------------
+@each $breakpoint in (none, sm, md, lg) {
+  .shadow-hover-#{$breakpoint}{
+    @include transition($transition-base);
+    @include hover{
+      @if $breakpoint =='md'{  
+        @extend .shadow;
+      } @else{
+        @extend .shadow-#{$breakpoint};
+      }
+    }
+  }
+}
 
 
 
@@ -128,6 +148,7 @@ $theme-colors: (
 
 .divider-space-30{height: 30px;}
 .divider-space-60{height: 60px;}
+.cursor-pointer{cursor: pointer;}
 
 .section-gap{
   &-60{
@@ -301,5 +322,76 @@ $theme-colors: (
       }
     }
   }
+  &-tabs {
+    fieldset{
+      display: none;
+      position: relative;
+    }
+  }
+}
+
+.author-thumb-avatar{
+  position: relative;
+  .count{
+    @include position(absolute, $top: -5px, $right: 10px);
+    padding: 3px 10px;
+    font-weight: 300;
+    color: $white;
+    @include box-shadow(0px 2px 10px rgba($theme-warning-color, 0.8));
+  }}
+
+.form-control{
+  @include placeholder{
+    color: rgba($theme-font-color, 0.5);
+  }}
+
+
+// Masterpieces Category Search
+.Navsearch-category{
+  position: relative;
+  z-index: 99;
+
+  &-filter{
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
+  }
+
+  &-select{
+    position: relative;
+    padding: 0px 15px;
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    width: 100%;
+  }
+
+  &-arrow{
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
+    padding-left: 20px;
+  }
+}
+
+.collection-filter-list{
+  li a{
+    color: $theme-font-color;
+    font-size: 13px;
+
+    &.active{
+      color: $theme-primary-color;
+    }
+  }
+} 
+
+.collection-products-item-fav{
+  @include position(absolute, $top: 10px, $right: 10px);
+  @include border-radius(50px);
+  @include flexbox();
+  @include size(30px);
+  @include justify-content(center);
+  @include align-items(center);
+  background-color: $white;
+  font-size: 12px;
 }
 

@@ -91,252 +91,549 @@
 
     <!--||=============================
     =============|| Accounts Profile Section ||===========================================================-->
-    <section class="user-checkout-page-area mt-n5">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8">
-					<div class="user-checkout-box mb-4 mb-md-0 rounded p-4 shadow bg-white">			
-						<div class="row">
-							<div class="col-5">
-								<h5 class="mb-5">Products</h5>
-							</div>
-							<div class="col-7">
-								<div class="mb-5 user-account-address-button text-right">
-									<button class="btn btn-sm btn-light px-2 px-md-4"><i class="fal font-size-15 mr-2 fa-angle-left" aria-hidden="true"></i>Continue <span class="d-none d-sm-inline-block">Shipping</span></button>
+    <section class="checkout-multistep-form-tabs user-checkout-page-area mt-n5">
+        <form id="msform">
+            <fieldset style='display:block'>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="user-checkout-box mb-4 mb-md-0 rounded p-4 shadow bg-white">
+								<div class="row">
+									<div class="col-5">
+										<h5 class="mb-5">Products</h5>
+									</div>
+									<div class="col-7">
+										<div class="mb-5 user-account-address-button text-right">
+											<button type='button' name="next" class="next action-button btn btn-sm btn-light px-2 px-md-4"><i class="fal font-size-15 mr-2 fa-angle-left" aria-hidden="true"></i>Continue <span class="d-none d-sm-inline-block">Shipping</span></button>
+										</div>
+									</div>
 								</div>
+								<ul class="user-products-item-list">
+									<!-- Single List Item -->
+									<li class="user-product-item-single">
+										<div class="row justify-content-between">
+											<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
+												<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
+													<img src="https:via.placeholder.com/120x120" alt="">
+												</div>
+											</div>
+											<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
+												<h6>Quantity</h6>
+												<input type="number" value="1" class="form-control">
+												<div class="mt-2 remove-button">
+													<button class="btn btn-sm small text-danger bg-transparent">
+														<i class="fal fa-times-circle" aria-hidden="true"></i>
+														Remove												
+													</button>
+												</div>
+											</div>
+											<div class="product-content order-xl-2 col-lg-7 col-xl-7">
+												<h5>Product 1</h5>
+												<ul class="small list-mb-5">
+													<li>Artist: <span class="text-dark-300">Jango</span></li>
+													<li>Color: <span class="text-dark-300">Black</span></li>
+													<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
+												</ul>
+											</div>
+										</div>
+										<hr class="dark">
+									</li>
+									<!-- Single List Item -->
+									<li class="user-product-item-single">
+										<div class="row justify-content-between">
+											<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
+												<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
+													<img src="https:via.placeholder.com/120x120" alt="">
+												</div>
+											</div>
+											<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
+												<h6>Quantity</h6>
+												<input type="number" value="1" class="form-control">
+												<div class="mt-2 remove-button">
+													<button class="btn btn-sm small text-danger bg-transparent">
+														<i class="fal fa-times-circle" aria-hidden="true"></i>
+														Remove												
+													</button>
+												</div>
+											</div>
+											<div class="product-content order-xl-2 col-lg-7 col-xl-7">
+												<h5>Product 1</h5>
+												<ul class="small list-mb-5">
+													<li>Artist: <span class="text-dark-300">Jango</span></li>
+													<li>Color: <span class="text-dark-300">Black</span></li>
+													<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
+												</ul>
+											</div>
+										</div>
+										<hr class="dark">
+									</li>
+									<!-- Single List Item -->
+									<li class="user-product-item-single">
+										<div class="row justify-content-between">
+											<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
+												<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
+													<img src="https:via.placeholder.com/120x120" alt="">
+												</div>
+											</div>
+											<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
+												<h6>Quantity</h6>
+												<input type="number" value="1" class="form-control">
+												<div class="mt-2 remove-button">
+													<button class="btn btn-sm small text-danger bg-transparent">
+														<i class="fal fa-times-circle" aria-hidden="true"></i>
+														Remove												
+													</button>
+												</div>
+											</div>
+											<div class="product-content order-xl-2 col-lg-7 col-xl-7">
+												<h5>Product 1</h5>
+												<ul class="small list-mb-5">
+													<li>Artist: <span class="text-dark-300">Jango</span></li>
+													<li>Color: <span class="text-dark-300">Black</span></li>
+													<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
+												</ul>
+											</div>
+										</div>
+										<hr class="dark">
+									</li>
+									<!-- Single List Item -->
+									<li class="user-product-item-single">
+										<div class="row justify-content-between">
+											<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
+												<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
+													<img src="https:via.placeholder.com/120x120" alt="">
+												</div>
+											</div>
+											<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
+												<h6>Quantity</h6>
+												<input type="number" value="1" class="form-control">
+												<div class="mt-2 remove-button">
+													<button class="btn btn-sm small text-danger bg-transparent">
+														<i class="fal fa-times-circle" aria-hidden="true"></i>
+														Remove												
+													</button>
+												</div>
+											</div>
+											<div class="product-content order-xl-2 col-lg-7 col-xl-7">
+												<h5>Product 1</h5>
+												<ul class="small list-mb-5">
+													<li>Artist: <span class="text-dark-300">Jango</span></li>
+													<li>Color: <span class="text-dark-300">Black</span></li>
+													<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
+												</ul>
+											</div>
+										</div>
+										<hr class="dark">
+									</li>
+									<!-- Single List Item -->
+									<li class="user-product-item-single">
+										<div class="row justify-content-between">
+											<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
+												<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
+													<img src="https:via.placeholder.com/120x120" alt="">
+												</div>
+											</div>
+											<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
+												<h6>Quantity</h6>
+												<input type="number" value="1" class="form-control">
+												<div class="mt-2 remove-button">
+													<button class="btn btn-sm small text-danger bg-transparent">
+														<i class="fal fa-times-circle" aria-hidden="true"></i>
+														Remove												
+													</button>
+												</div>
+											</div>
+											<div class="product-content order-xl-2 col-lg-7 col-xl-7">
+												<h5>Product 1</h5>
+												<ul class="small list-mb-5">
+													<li>Artist: <span class="text-dark-300">Jango</span></li>
+													<li>Color: <span class="text-dark-300">Black</span></li>
+													<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
+												</ul>
+											</div>
+										</div>
+										<hr class="dark">
+									</li>
+									<!-- Single List Item -->
+									<li class="user-product-item-single">
+										<div class="row justify-content-between">
+											<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
+												<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
+													<img src="https:via.placeholder.com/120x120" alt="">
+												</div>
+											</div>
+											<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
+												<h6>Quantity</h6>
+												<input type="number" value="1" class="form-control">
+												<div class="mt-2 remove-button">
+													<button class="btn btn-sm small text-danger bg-transparent">
+														<i class="fal fa-times-circle" aria-hidden="true"></i>
+														Remove												
+													</button>
+												</div>
+											</div>
+											<div class="product-content order-xl-2 col-lg-7 col-xl-7">
+												<h5>Product 1</h5>
+												<ul class="small list-mb-5">
+													<li>Artist: <span class="text-dark-300">Jango</span></li>
+													<li>Color: <span class="text-dark-300">Black</span></li>
+													<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
+												</ul>
+											</div>
+										</div>
+										<hr class="dark">
+									</li>
+		
+									<div class="more-load-button text-center">
+										<button class="btn btn-outline-primary btn-sm">
+											<i class="fal fa-circle-notch" aria-hidden="true"></i>
+											Update Cart
+										</button>
+		
+									</div>
+								</ul>
 							</div>
 						</div>
-						<ul class="user-products-item-list">
-							<!-- Single List Item -->
-							<li class="user-product-item-single">
-								<div class="row justify-content-between">
-									<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
-										<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
-											<img src="https:via.placeholder.com/120x120" alt="">
-										</div>
-									</div>
-									<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
-										<h6>Quantity</h6>
-										<input type="number" value="1" class="form-control">
-										<div class="mt-3 remove-button small text-danger">
-											<i class="fal fa-times-circle" aria-hidden="true"></i>
-											Remove
-										</div>
-									</div>
-									<div class="product-content order-xl-2 col-lg-7 col-xl-7">
-										<h5>Product 1</h5>
-										<ul class="small list-mb-5">
-											<li>Artist: <span class="text-dark-300">Jango</span></li>
-											<li>Color: <span class="text-dark-300">Black</span></li>
-											<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
-										</ul>
-									</div>
+						<div class="col-lg-4">
+							<div class="sidebar-subtotal p-4 shadow bg-white">
+								<div class="subtotal-head text-center">
+									<h6>Subtotal</h6>
+									<h3>$265.00</h3>
 								</div>
 								<hr class="dark">
-							</li>
-							<!-- Single List Item -->
-							<li class="user-product-item-single">
-								<div class="row justify-content-between">
-									<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
-										<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
-											<img src="https:via.placeholder.com/120x120" alt="">
-										</div>
-									</div>
-									<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
-										<h6>Quantity</h6>
-										<input type="number" value="1" class="form-control">
-										<div class="mt-3 remove-button small text-danger">
-											<i class="fal fa-times-circle" aria-hidden="true"></i>
-											Remove
-										</div>
-									</div>
-									<div class="product-content order-xl-2 col-lg-7 col-xl-7">
-										<h5>Product 1</h5>
-										<ul class="small list-mb-5">
-											<li>Artist: <span class="text-dark-300">Jango</span></li>
-											<li>Color: <span class="text-dark-300">Black</span></li>
-											<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
-										</ul>
-									</div>
+								<div class="mb-3 audition-comment-area">
+									<h6 class="mb-3"><span class="badge badge-primary primary-fonts font-weight-light py-1 px-2 mr-2">Note</span>Additional comments</h6>
+									<textarea name="comments" cols="30" rows="5" class="form-control"></textarea>
 								</div>
-								<hr class="dark">
-							</li>
-							<!-- Single List Item -->
-							<li class="user-product-item-single">
-								<div class="row justify-content-between">
-									<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
-										<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
-											<img src="https:via.placeholder.com/120x120" alt="">
+								<div class="promo-code-box">
+									<div class="card">
+										<div class="card-header bg-white">
+		
+											<div class="d-flex align-self-center justify-content-between">
+												<h6 class="my-auto">Apply Coupon Code</h6>
+												<div class="btn-group role="group">
+													<button id="btnGroupVerticalDrop1" type="button" class="btn btn-light rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fal fa-caret-up" aria-hidden="true"></i>
+													</button>
+													<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupVerticalDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+													  <a class="dropdown-item" href="#">Option Select1</a>
+													  <a class="dropdown-item" href="#">Option Select2</a>
+													  <a class="dropdown-item" href="#">Option Select3</a>
+													</div>
+												</div>
+											</div>
 										</div>
-									</div>
-									<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
-										<h6>Quantity</h6>
-										<input type="number" value="1" class="form-control">
-										<div class="mt-3 remove-button small text-danger">
-											<i class="fal fa-times-circle" aria-hidden="true"></i>
-											Remove
+										<div class="card-body">
+											<div class="input-group mb-3">
+												<input type="text" placeholder="Promo Code" class="form-control">
+											</div>
+											<button class="btn btn-block btn-outline-primary">Apply Promo Code</button>
 										</div>
-									</div>
-									<div class="product-content order-xl-2 col-lg-7 col-xl-7">
-										<h5>Product 1</h5>
-										<ul class="small list-mb-5">
-											<li>Artist: <span class="text-dark-300">Jango</span></li>
-											<li>Color: <span class="text-dark-300">Black</span></li>
-											<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
-										</ul>
-									</div>
-								</div>
-								<hr class="dark">
-							</li>
-							<!-- Single List Item -->
-							<li class="user-product-item-single">
-								<div class="row justify-content-between">
-									<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
-										<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
-											<img src="https:via.placeholder.com/120x120" alt="">
-										</div>
-									</div>
-									<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
-										<h6>Quantity</h6>
-										<input type="number" value="1" class="form-control">
-										<div class="mt-3 remove-button small text-danger">
-											<i class="fal fa-times-circle" aria-hidden="true"></i>
-											Remove
-										</div>
-									</div>
-									<div class="product-content order-xl-2 col-lg-7 col-xl-7">
-										<h5>Product 1</h5>
-										<ul class="small list-mb-5">
-											<li>Artist: <span class="text-dark-300">Jango</span></li>
-											<li>Color: <span class="text-dark-300">Black</span></li>
-											<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
-										</ul>
-									</div>
-								</div>
-								<hr class="dark">
-							</li>
-							<!-- Single List Item -->
-							<li class="user-product-item-single">
-								<div class="row justify-content-between">
-									<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
-										<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
-											<img src="https:via.placeholder.com/120x120" alt="">
-										</div>
-									</div>
-									<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
-										<h6>Quantity</h6>
-										<input type="number" value="1" class="form-control">
-										<div class="mt-3 remove-button small text-danger">
-											<i class="fal fa-times-circle" aria-hidden="true"></i>
-											Remove
-										</div>
-									</div>
-									<div class="product-content order-xl-2 col-lg-7 col-xl-7">
-										<h5>Product 1</h5>
-										<ul class="small list-mb-5">
-											<li>Artist: <span class="text-dark-300">Jango</span></li>
-											<li>Color: <span class="text-dark-300">Black</span></li>
-											<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
-										</ul>
-									</div>
-								</div>
-								<hr class="dark">
-							</li>
-							<!-- Single List Item -->
-							<li class="user-product-item-single">
-								<div class="row justify-content-between">
-									<div class="product-thumb-box mb-3 mb-xl-0 col col-md-4 col-lg-3 col-xl-2">
-										<div class="product-thumb img-thumbnail rounded-0 avatar avatar-w-120">
-											<img src="https:via.placeholder.com/120x120" alt="">
-										</div>
-									</div>
-									<div class="product-quantity order-xl-3 col col-md-4 col-lg-3 col-xl-3">
-										<h6>Quantity</h6>
-										<input type="number" value="1" class="form-control">
-										<div class="mt-3 remove-button small text-danger">
-											<i class="fal fa-times-circle" aria-hidden="true"></i>
-											Remove
-										</div>
-									</div>
-									<div class="product-content order-xl-2 col-lg-7 col-xl-7">
-										<h5>Product 1</h5>
-										<ul class="small list-mb-5">
-											<li>Artist: <span class="text-dark-300">Jango</span></li>
-											<li>Color: <span class="text-dark-300">Black</span></li>
-											<li><Strong class="font-size-17 text-primary">$154.00</Strong></li>
-										</ul>
-									</div>
-								</div>
-								<hr class="dark">
-							</li>
-
-							<div class="more-load-button text-center">
-								<button class="btn btn-outline-primary btn-sm">
-									<i class="fal fa-circle-notch" aria-hidden="true"></i>
-									Update Cart
-								</button>
-
-							</div>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="sidebar-subtotal p-4 shadow bg-white">
-						<div class="subtotal-head text-center">
-							<h6>Subtotal</h6>
-							<h3>$265.00</h3>
-						</div>
-						<hr class="dark">
-						<div class="mb-3 audition-comment-area">
-							<h6 class="mb-3"><span class="badge badge-primary primary-fonts font-weight-light py-1 px-2 mr-2">Note</span>Additional comments</h6>
-							<textarea name="comments" id="" cols="30" rows="5" class="form-control"></textarea>
-						</div>
-						<div class="promo-code-box">
-							<div class="card">
-								<div class="card-header bg-white">
-
-									<div class="d-flex align-self-center justify-content-between">
-										<h6 class="my-auto">Apply Coupon Code</h6>
-										<div class="btn-group role="group">
-											<button id="btnGroupVerticalDrop1" type="button" class="btn btn-light rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<i class="fal fa-caret-up" aria-hidden="true"></i>
-											</button>
-											<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupVerticalDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-											  <a class="dropdown-item" href="#">Option Select1</a>
-											  <a class="dropdown-item" href="#">Option Select2</a>
-											  <a class="dropdown-item" href="#">Option Select3</a>
+										<div class="card-footer bg-white">
+											<div class="d-flex align-self-center justify-content-between">
+												<h6 class="my-auto">Shipping Estimates</h6>
+												<div class="btn-group role="group">
+													<button id="btnGroupVerticalDrop2" type="button" class="btn btn-light rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fal fa-caret-up" aria-hidden="true"></i>
+													</button>
+													<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupVerticalDrop2" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+													  <a class="dropdown-item" href="#">Option Select1</a>
+													  <a class="dropdown-item" href="#">Option Select2</a>
+													  <a class="dropdown-item" href="#">Option Select3</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="card-body">
-									<div class="input-group mb-3">
-										<input type="text" placeholder="Promo Code" class="form-control">
-									</div>
-									<button class="btn btn-block btn-outline-primary">Apply Promo Code</button>
+		
+								<div class="procced-to-card-area pt-4">
+									<button type="button" name="next" class="next btn btn-block btn-danger">
+										<i class="fal fa-money-check" aria-hidden="true"></i>
+										Procced to Checkout
+									</button>
 								</div>
-								<div class="card-footer bg-white">
-									<div class="d-flex align-self-center justify-content-between">
-										<h6 class="my-auto">Shipping Estimates</h6>
-										<div class="btn-group role="group">
-											<button id="btnGroupVerticalDrop1" type="button" class="btn btn-light rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<i class="fal fa-caret-up" aria-hidden="true"></i>
-											</button>
-											<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupVerticalDrop1" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-											  <a class="dropdown-item" href="#">Option Select1</a>
-											  <a class="dropdown-item" href="#">Option Select2</a>
-											  <a class="dropdown-item" href="#">Option Select3</a>
+		
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="user-checkout-box mb-4 mb-md-0 rounded p-4 shadow bg-white">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="user-checkbox-profile mb-3 bg-light d-md-flex justify-content-between align-items-center py-4 px-3 rounded">
+											<div class="author-thumb-area mb-3 mb-md-0 d-flex align-items-center">
+												<div class="avatar author-thumb-avatar">
+													<img src="https://via.placeholder.com/130x130" class="avatar-w-100 avatar-h-100 rounded-circle img-thumbnail" alt="">
+													<span class="count badge badge-warning">384</span>
+												</div>
+												<div class="author-details">
+													<h5>Susan Gardner</h5>
+													<a href="#" class="text-primary small">Edit</a>
+												</div>
+											</div>
+											<div class="author-edit-button-area">
+												<a href="#" class="btn btn-sm btn-light px-3 py-2 text-primary bg-white shadow"><i class="fal fa-edit mr-1" aria-hidden="true"></i>Edit Profile</a>
 											</div>
 										</div>
+										<h5 class="mb-5">Products</h5>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<h6 class="mb-0">Shipping Address</h6>
+										<hr class="dark">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="firstNameLabel" class="small">First Name</label>
+											<input type="text" id="firstNameLabel" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="lastNameLabel" class="small">Last Name</label>
+											<input type="text" id="lastNameLabel" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="emailLabel" class="small">E-mail Address</label>
+											<input type="email" id="emailLabel" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="phoneLabel" class="small">Phone Number</label>
+											<input type="phone" id="phoneLabel" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="companyLabel" class="small">Company</label>
+											<input type="text" id="companyLabel" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="countryLabel" class="small">Country</label>
+											<select id="countryLabel" class='form-control'>
+												<option value="#">Choose Country</option>
+												<option value="#">Afghanistan</option>
+												<option value="#">Albania</option>
+												<option value="#">Algeria</option>
+												<option value="#">Andorra</option>
+												<option value="#">Angola</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="cityLabel" class="small">City</label>
+											<select id="cityLabel" class='form-control'>
+												<option value="#">Choose City</option>
+												<option value="#">Kings</option>
+												<option value="#">Queens</option>
+												<option value="#">Orange</option>
+												<option value="#">Niagara</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="zipLabel" class="small">Zip Code</label>
+											<input type="text" id="zipLabel" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="adressLabel" class="small">Address</label>
+											<input type="text" id="adressLabel" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="adressLabel2" class="small">Address2</label>
+											<input type="text" id="adressLabel2" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<h6 class="mb-0 mt-4">Billing address</h6>
+										<hr class="dark">
+										<div class="form-check mb-3">
+										  <label class="form-check-label">
+											<input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+											Same as Shipping address
+										  </label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<button type='button' name="next" class="previous btn mb-2 mb-md-0 btn-light btn-block"><i class="fal fa-angle-left mr-2" aria-hidden="true"></i>Back to Cart</button>
+									</div>
+									<div class="col-md-6">
+										<button type='button' name="next" class="next btn btn-danger btn-block">Proceed to Shipping<i class="fal fa-angle-right ml-2" aria-hidden="true"></i></button>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="col-lg-4">
+							<div class="order-summary p-4 shadow bg-white">
+								<h5 class="mb-4 text-center">Order Summery</h5>
+								<ul class="order-summery-list mb-5">
+									<li class="order-summery-item">
+										<div class="d-flex align-items center">
+											<div class="order-thumb avatar">
+												<img src="https://via.placeholder.com/150x150" class="avatar-w-80" alt="">
+											</div>
+											<div class="order-details">
+												<h6>Product 1</h6>
+												<div class="quantity-value small">
+													<span class="text-primary">$150.00</span>
+													x <span>1</span>
+												</div>
+											</div>
+										</div>
+										<hr class="dark size-10">
+									</li>
+									<li class="order-summery-item">
+										<div class="d-flex align-items center">
+											<div class="order-thumb avatar">
+												<img src="https://via.placeholder.com/150x150" class="avatar-w-80" alt="">
+											</div>
+											<div class="order-details">
+												<h6>Product 1</h6>
+												<div class="quantity-value small">
+													<span class="text-primary">$150.00</span>
+													x <span>1</span>
+												</div>
+											</div>
+										</div>
+										<hr class="dark size-10">
+									</li>
+									<li class="order-summery-item">
+										<div class="d-flex align-items center">
+											<div class="order-thumb avatar">
+												<img src="https://via.placeholder.com/150x150" class="avatar-w-80" alt="">
+											</div>
+											<div class="order-details">
+												<h6>Product 1</h6>
+												<div class="quantity-value small">
+													<span class="text-primary">$150.00</span>
+													x <span>1</span>
+												</div>
+											</div>
+										</div>
+										<hr class="dark size-10">
+									</li>
+									<li class="order-summery-item">
+										<div class="d-flex align-items center">
+											<div class="order-thumb avatar">
+												<img src="https://via.placeholder.com/150x150" class="avatar-w-80" alt="">
+											</div>
+											<div class="order-details">
+												<h6>Product 1</h6>
+												<div class="quantity-value small">
+													<span class="text-primary">$150.00</span>
+													x <span>1</span>
+												</div>
+											</div>
+										</div>
+										<hr class="dark size-10">
+									</li>
+									<li class="order-summery-item">
+										<div class="d-flex align-items center">
+											<div class="order-thumb avatar">
+												<img src="https://via.placeholder.com/150x150" class="avatar-w-80" alt="">
+											</div>
+											<div class="order-details">
+												<h6>Product 1</h6>
+												<div class="quantity-value small">
+													<span class="text-primary">$150.00</span>
+													x <span>1</span>
+												</div>
+											</div>
+										</div>
+										<hr class="dark size-10">
+									</li>
+								</ul>
 
+								<div class="mb-3 subtotal-area">
+									<div class="subtotal-item">
+										Subtotal: <span class="float-right">$265.00</span>
+									</div>	
+									<div class="subtotal-item">
+										Shipping: <span class="float-right">---</span>
+									</div>	
+									<div class="subtotal-item">
+										Taxes: <span class="float-right">$8.40</span>
+									</div>	
+									<div class="subtotal-item">
+										Discount: <span class="float-right">--</span>
+									</div>
+									<hr class="dark">	
+									<h3 class="font-weight-light primary-fonts text-center">$274.<span class="font-size-14">50</span></h3>
+								</div>
+							
+								<div class="promo-code-box">
+									<div class="single-item">
+										<input type="text" class="mb-3 form-control" placeholder="Promo Code">
+										<button class="btn btn-block btn-outline-primary">Apply promo Code</button>
+									</div>
+								</div>		
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</fieldset>
+			
+			<fieldset>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="user-checkout-box mb-4 mb-md-0 rounded p-4 shadow bg-white">
+								<h1>Shipping Address</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="user-checkout-box mb-4 mb-md-0 rounded p-4 shadow bg-white">
+								<h1>Payment</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="user-checkout-box mb-4 mb-md-0 rounded p-4 shadow bg-white">
+								<h1>Review</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>
 	</section>
 
 	<div class="divider-space-60"></div>
@@ -452,6 +749,7 @@
 	<script src="assets/js/vendor/popper.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/plugins.js"></script>
+	<script src="assets/js/checkout-form-validation.js"></script>
 	<!--Custom Js -->
 	<script src="assets/js/main.js"></script>
 </body>
