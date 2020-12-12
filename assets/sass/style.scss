@@ -360,9 +360,12 @@ $theme-colors: (
   &-select{
     position: relative;
     padding: 0px 15px;
-    border-left: 1px solid $border-color;
     border-right: 1px solid $border-color;
     width: 100%;
+
+    @include media-breakpoint-up(md){
+      border-left: 1px solid $border-color;
+    }
   }
 
   &-arrow{

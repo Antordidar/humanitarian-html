@@ -32,3 +32,5 @@
 16# cart-checkout-Page => http://antordidar.github.io/humanitarian-html/cart.html
 
 17# masterpieces-Page => http://antordidar.github.io/humanitarian-html/masterpieces.html
+
+18# artisans-Page => http://antordidar.github.io/humanitarian-html/artisans.html
