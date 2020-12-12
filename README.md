@@ -31,4 +31,4 @@
 
 16# cart-checkout-Page => http://antordidar.github.io/humanitarian-html/cart.html
 
-16# masterpieces-Page => http://antordidar.github.io/humanitarian-html/masterpieces.html
+17# masterpieces-Page => http://antordidar.github.io/humanitarian-html/masterpieces.html
