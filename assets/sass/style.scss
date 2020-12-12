@@ -228,3 +228,78 @@ $theme-colors: (
 .overflow-x-auto{
   overflow-x: auto !important;
 }
+
+.list-mb-5 li{
+  margin-bottom: 5px;
+}
+
+.checkout-multistep-form{
+  
+  &-progressbar{
+    counter-reset: my-sec-counter;
+
+    li {
+      display: inline-block;
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+      position: relative;
+
+      @include media-breakpoint-up(xl){
+      padding-top: 30px;
+      min-width: 150px;
+        
+        @include before{
+          @include size(calc(100% + 5px), 4px);
+          background-color: $light;
+          left: 0;
+          top: 0;
+        }
+        &:after{
+          counter-increment: my-sec-counter;
+          @include size(30px);
+          @include flexbox(none);
+          @include justify-content(center);
+          @include align-items(center);
+          background-color: $light;
+          content: counter(my-sec-counter);
+          @include border-radius(50px);
+          top: -14px;
+          left: 50%;
+          position: absolute;
+          color: $theme-font-color;
+          transform: translateX(-50%);
+  
+        }
+        &.active {
+          color: $white;
+
+          &:before, &:after{
+            background-color: $theme-danger-color;
+            color: $white;
+          }
+        }
+      }
+      @include media-breakpoint-down(lg){
+        i.fal{
+          color: rgba(255,255,255,0.5);
+        }
+        &:not(:first-child){
+          padding-left: 15px;
+        }
+        &:not(:last-child){
+          padding-right: 15px;
+
+          &:after{
+            @include position(absolute, $content: '\f105', $right: 0, $top: 50%);
+            color: rgba(255,255,255,0.5);
+          }
+        }
+
+        &.active i, &.active:after{
+          color: $white;
+        }
+      }
+    }
+  }
+}
+

@@ -184,14 +184,17 @@ $unit: 'px'; // Feel free to change the unit.
 //    vertical-align: middle;
 // }
 
-@mixin flexbox() {// Flexbox display
+@mixin flexbox($width-value: null) {// Flexbox display
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  // necessary for ie10
-  width: 100%;
+  
+  @if $width-value != "none"{
+   // necessary for ie10
+   width: 100%;
+  }
 }
 
 @mixin justify-content($justify) {//Justify-content
