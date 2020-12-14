@@ -34,3 +34,5 @@
 17# masterpieces-Page => http://antordidar.github.io/humanitarian-html/masterpieces.html
 
 18# artisans-Page => http://antordidar.github.io/humanitarian-html/artisans.html
+
+19# artisan-Page => http://antordidar.github.io/humanitarian-html/artisan.html

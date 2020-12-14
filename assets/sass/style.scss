@@ -397,4 +397,65 @@ $theme-colors: (
   background-color: $white;
   font-size: 12px;
 }
+.list-inline-social{
+  li a {
+    @include size(30px);
+    @include flexbox(none);
+    @include align-items(center);
+    @include justify-content(center);
+    @extend .font-size-15;
+  }
+}
 
+// Masonarry Gallery
+.artisan-gallery{
+
+  &-item{
+    @extend .d-inline-block;
+    width: calc(100%/2 - 4px);
+    vertical-align: top;
+    height: 200px;
+    @extend .float-left;
+    @extend .position-relative;
+    @extend .overflow-hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.long-item{
+      height: 400px;}
+
+    img{
+      object-fit: cover;
+    }
+
+    &.overlay:after{
+      @include position(absolute, $content: '', $top: 0, $right: 0, $left: 0, $bottom: 0, $zIndex: 0);
+      background: $black none repeat scroll 0 0;
+      @include opacity(0.5);
+    }
+
+    .video-link{
+      @extend .d-inline-block;
+      @include position(both, $zIndex: 1);
+      color: $light;
+      font-size: 50px;
+    }
+    .view-more-items{
+      @include position(both, $zIndex: 1);
+      color: $white;
+      @extend .text-center;
+
+      .count{
+        color: $white;
+        font-size: 40px;
+        @extend .secondary-fonts;
+      }
+      p{
+        color: $light;
+        font-size: 20px;
+        @extend .primary-fonts;
+      }
+    }
+  }
+}
