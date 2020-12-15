@@ -77,6 +77,47 @@
 		}
 	}
 
+	
+	/*=============================================
+		=    		Slick Regular slider	     =
+	=============================================*/
+	$(".regular-slider").slick({
+		arrows: true,
+		dots: false,
+		infinite: true,
+		slidesToShow: 4,
+		nextArrow: '<i class="fal fa-angle-right slick-arrow-right" aria-hidden="true"></i>',
+		prevArrow: '<i class="fal fa-angle-left slick-arrow-left" aria-hidden="true"></i>',
+		slidesToScroll: 2,
+		responsive: [
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 640,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
+	
+	/*=============================================
+		=    		 Magnific Popup          =
+	=============================================*/
+	/* magnificPopup video view */
+	$('.popup-video').magnificPopup({
+		type: 'iframe'
+	});
+
+
+
 
 	/*=============================================
 		=    		 Aos Active  	         =

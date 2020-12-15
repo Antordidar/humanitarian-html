@@ -23,6 +23,8 @@ $secondary-fonts: 'Helvetica-Bold';
 // COLOR VARIABLES
 $theme-primary-color    : #585fcb !default;
 $theme-danger-color     : #FE696A !default;
+$theme-success-color    : #42d697 !default;
+$theme-red-color        : #F34770 !default;
 $theme-warning-color    : #FEA569 !default;
 $theme-dark-color       : #373f50 !default;
 
@@ -43,6 +45,7 @@ $theme-colors: (
   "danger"              : $theme-danger-color,
   "dark"                : $theme-dark-color,
   "light"               : $theme-light-color,
+  "success"               : $theme-success-color,
   "warning"             : $theme-warning-color,
 );
 
@@ -129,7 +132,9 @@ $theme-colors: (
 
 .list-social-icons a{
   @include size(30px);
-  text-align: center;
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
 }
 
 .card-body{
@@ -425,10 +430,6 @@ $theme-colors: (
     &.long-item{
       height: 400px;}
 
-    img{
-      object-fit: cover;
-    }
-
     &.overlay:after{
       @include position(absolute, $content: '', $top: 0, $right: 0, $left: 0, $bottom: 0, $zIndex: 0);
       background: $black none repeat scroll 0 0;
@@ -438,24 +439,175 @@ $theme-colors: (
     .video-link{
       @extend .d-inline-block;
       @include position(both, $zIndex: 1);
-      color: $light;
+      @extend .text-light;
       font-size: 50px;
     }
     .view-more-items{
       @include position(both, $zIndex: 1);
-      color: $white;
+      @extend .text-white;
       @extend .text-center;
 
       .count{
-        color: $white;
+        @extend .text-white;
         font-size: 40px;
         @extend .secondary-fonts;
       }
       p{
-        color: $light;
+        @extend .text-light;
         font-size: 20px;
         @extend .primary-fonts;
       }
+    }
+  }
+}
+
+
+// Slick Slider Icons
+.slick-arrow{
+  @include size(30px);
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  @extend .bg-white;
+  @extend .border;
+  @extend .rounded-circle;
+  cursor: pointer;
+  @include transition($transition-base);
+  @include position(absolute, $top: 100px, $zIndex: 3);
+
+  @include hover{
+    @extend .shadow;
+  }
+  &-right{right: 0;}
+  &-left{left: 0;}
+}
+
+// PRODUCT GALLERY STYLE
+.product-gallery-box{
+  margin-top: -120px;
+  .gallery {
+  .previews, .full{
+    @extend .float-left;}
+
+  .previews {
+    @extend .mr-3;
+
+    img, .video-item{
+      @include size(40px, 60px);
+    }
+
+    .video-item{
+      @extend .d-flex;
+      @extend .justify-content-center;
+      @extend .align-items-center;
+      @extend .text-center;
+    }
+
+    a {
+      @extend .border;
+      @extend .rounded;
+      @extend .d-block;
+      @extend .mb-2;
+      @extend .px-2;
+      @extend .position-relative;
+      @include transition($transition-base);
+
+      @include after{
+        @include size(100%);
+        background-color: $light;
+        @include position($top: 0, $left: 0, $zIndex: 2);
+        @include opacity(0.6);
+        @include transition($transition-base);
+      }
+    
+      &:hover, &.selected{
+        @extend .border-danger;
+        
+        &:after{@include opacity(0);}
+      }
+    }
+  }
+  
+  .full {
+    width: calc(100% - 80px);
+    @extend .text-center;
+    @extend .font-size-12;
+
+      @include media-breakpoint-up(md){
+        img {height: 450px;}
+        }      
+        @include media-breakpoint-down(md){
+        img {height: 330px;}
+        }      
+      }
+    }
+}
+
+
+
+.product-item{
+
+  &-header{
+    @extend .d-sm-flex;
+    @extend .justify-content-between;
+    @extend .align-items-center;
+
+    
+    ._itemPrice{
+      @extend .font-weight-bold;
+      @extend .text-primary;
+      @extend .font-size-20;
+      @extend .mr-2;
+
+    }
+    ._itemOldPrice{
+      @extend .text-dark-300;
+      @extend .font-size-16;   
+      @extend .mr-2;
+    }
+    ._itemSale{
+      background-color: $theme-red-color;
+      @extend .font-size-13;
+      @extend .shadow;
+      @extend .rounded;
+      @extend .text-white;
+      padding: 2px 8px;
+    }
+    ._itemAddWishlist{
+      @extend .bg-success;
+      @extend .text-white;
+      @extend .py-2;
+      @extend .px-4;
+      @extend .font-size-16;
+      @extend .shadow;
+      @extend .position-relative;
+      @extend .rounded-left;
+
+      @include media-breakpoint-up(sm){
+        @include after{
+          @include position($right: 0, $bottom: -10px);
+          border-top: 10px solid darken($theme-success-color, 8%);
+          border-right: 10px solid transparent;
+        }
+      }
+    }
+  }
+  &-pricing{}
+  
+  &-wishlist{
+    @include media-breakpoint-up(sm){
+      transform: translateX(33px);
+    }
+  }
+}
+
+.instraction-pills{
+  @extend .border-bottom;
+  .nav-link{
+    @extend .text-danger;
+
+    &.active{
+      @extend .border-danger;
     }
   }
 }

@@ -8,7 +8,7 @@
 	
 	nav.navbar{
 		@include box-shadow(0 4px 12px 0 rgba(0, 0, 0, 0.04));
-		z-index: 99999;
+		z-index: 998;
 	}
 	.navbar-brand img,
 	.navbar-brand svg{
@@ -26,7 +26,7 @@
 			color: $theme-danger-color;
 		}
 		@media (min-width: 991px){	
-			margin-left: 25px;
+			margin-left: 20px;
 		}
 	}
 	&-nav-cart{

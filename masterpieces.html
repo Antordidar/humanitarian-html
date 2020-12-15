@@ -28,9 +28,9 @@
 	<!--||=============================
 	=============||Header Section|| ===================================================-->
 	<header class="header">
-		<nav class="navbar navbar-expand-xl navbar-light bg-white" id="sticky-header">
+		<nav class="navbar navbar-expand-xl py-0 navbar-light bg-white" id="sticky-header">
 			<div class="container">
-				<a class="navbar-brand py-0" href="#"><img src="assets/img/logo.png" alt=""></a>
+				<a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt=""></a>
 
 				<button class="navbar-toggler ml-auto pr-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="bar-icon"></span>
@@ -39,11 +39,31 @@
 				  </button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				  <div class="navbar-nav ml-auto">
-					<a class="nav-link" href="index.html"><i class="fal d-inline-block d-xl-none mr-3 fa-shopping-bag" aria-hidden="true"></i>Shop</a>
-					<a class="nav-link" href="#"><i class="fal d-inline-block d-xl-none mr-3 fa-shopping-bag" aria-hidden="true"></i>Artisans</a>
-					<a class="nav-link active" href="gallery.html"><i class="fal d-inline-block d-xl-none mr-3 fa-list-alt" aria-hidden="true"></i>Gallery Events</a>
-					<a class="nav-link" href="#"><i class="fal d-inline-block d-xl-none mr-3 fa-shopping-bag" aria-hidden="true"></i>Our Stories</a>
-					<a class="nav-link" href="#"><i class="fal d-inline-block d-xl-none mr-3 fa-user-plus" aria-hidden="true"></i>Join Us</a>
+					<li class="nav-item dropdown dropdown-menu-left">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Pages
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="about.html">About</a>
+							<a class="dropdown-item" href="artisans.html">Artisans</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="masterpieces.html">Mastarpieces</a>
+							<a class="dropdown-item" href="metarial-information.html">Metarial Information</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="order.html">Order</a>
+							<a class="dropdown-item" href="cart.html">Cart</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="account-address.html">Account Address</a>
+							<a class="dropdown-item" href="accounts.html">Accounts</a>
+							<a class="dropdown-item" href="activate-account.html">Activate Accounts</a>
+							<a class="dropdown-item" href="page-404.html">404</a>
+						</div>
+					</li>
+					<a class="nav-link active" href="index.html"><i class="fal d-inline-block d-xl-none mr-3 fa-shopping-bag" aria-hidden="true"></i>Shop</a>
+					<a class="nav-link" href="artisan.html"><i class="fal d-inline-block d-xl-none mr-3 fa-shopping-bag" aria-hidden="true"></i>Artisans</a>
+					<a class="nav-link" href="gallery.html"><i class="fal d-inline-block d-xl-none mr-3 fa-list-alt" aria-hidden="true"></i>Gallery Events</a>
+					<a class="nav-link" href="our-stories.html"><i class="fal d-inline-block d-xl-none mr-3 fa-shopping-bag" aria-hidden="true"></i>Our Stories</a>
+					<a class="nav-link" href="sign-up.html"><i class="fal d-inline-block d-xl-none mr-3 fa-user-plus" aria-hidden="true"></i>Join Us</a>
 					<a class="nav-link d-block d-xl-none" href="#"><i class="fal d-inline-block d-xl-none mr-3 fa-shopping-cart" aria-hidden="true"></i>Cart <span class="ml-1 badge badge-primary" >0</span></a>
 				  </div>
 				</div>
@@ -171,7 +191,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -185,7 +205,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -199,7 +219,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -213,7 +233,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -227,7 +247,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -241,7 +261,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -277,7 +297,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -291,7 +311,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -305,7 +325,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -319,7 +339,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -333,7 +353,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
@@ -347,7 +367,7 @@
 									</a>
 									<div class="card-body p-3">
 										<p class="font-size-13 mb-2">By Lydia Mabungo</p>
-										<h6 class="card-title mb-2">Product 1</h6>
+										<h6 class="card-title mb-2"><a href="products.html">Product 1</a></h6>
 										<div class="pricing-count text-primary">$554.00</div>
 									</div>
 								</div>
