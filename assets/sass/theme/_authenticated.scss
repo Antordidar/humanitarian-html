@@ -50,7 +50,7 @@
 
 @include media-breakpoint-up(lg){
     .user-address-item-list{
-        li:nth-child(odd){
+        > li:nth-child(odd){
             padding-right: 80px;
             position: relative;
             @include after{
@@ -59,7 +59,7 @@
                 @include position($right: 0, $top: 50%);
             }
         }
-        li:nth-child(even){
+        > li:nth-child(even){
             padding-left: 80px;
         }
     }
