@@ -12,7 +12,8 @@
 	}
 	.navbar-brand {
 		img, svg{
-			max-height: 80px;
+			max-height: 85px;
+			padding: 6px;
 			@include media-breakpoint-down(md){
 				max-height: 50px;
 			}
