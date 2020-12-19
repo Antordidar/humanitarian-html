@@ -10,11 +10,21 @@
 		@include box-shadow(0 4px 12px 0 rgba(0, 0, 0, 0.04));
 		z-index: 998;
 	}
-	.navbar-brand img,
-	.navbar-brand svg{
-		max-height: 80px;
-		@media (max-width: 667px){
-			max-height: 50px;
+	.navbar-brand {
+		img, svg{
+			max-height: 80px;
+			@include media-breakpoint-down(md){
+				max-height: 50px;
+			}
+		}
+		&-text{
+			@extend .font-size-25;
+			@extend .mb-1;
+			color: #333333 !important;	
+		}
+		&-subtext{
+			@extend .font-size-12;
+			@extend .font-italic;
 		}
 	}
 
