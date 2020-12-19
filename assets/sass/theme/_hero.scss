@@ -1,7 +1,7 @@
 /*//=============================
 =============|| BANNER ||=========================================================================*/
 .hero-area{
-    background-color: $theme-light-color;
+    background-color: $light;
     padding: 30px 0;
 
     .single-slider{
@@ -46,7 +46,7 @@
 
             }
             &.slick-active button{
-                background-color: $theme-primary-color;
+                background-color: $primary;
             }
         }
     }

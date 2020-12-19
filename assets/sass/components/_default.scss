@@ -29,7 +29,7 @@ button:focus,input:focus,input:focus,textarea,textarea:focus, .form-control:focu
     box-shadow: none;}
 
 h1, h2, h3, h4, h5, h6 {
-    color: $theme-dark-color;
+    color: $dark;
     font-family: $secondary-fonts;
     font-weight: 700;
     overflow-wrap: break-word;
@@ -155,25 +155,7 @@ hr {
     @include list-loop('&-w-', 'width', 150, 10, 30);
     @include list-loop('&-h-', 'height', 150, 10, 30);
 }
-.list-inline li, .list-inline li a{display: inline-block;}
-.list-pagination{
-    &-link{
-        color: $theme-font-color;
-        background-color: $light;
-        display: inline-block;
-        padding: 5px 14px;
-        border: 1px solid $border-color;
-        margin: 0px 2px;
-        @include border-radius(.25rem);
 
-        &.active{
-            background-color: $theme-danger-color;
-            border-color: $theme-danger-color;
-            color: $white;
-            @include box-shadow(0px 1px 8px rgba($theme-danger-color, 0.6));
-        }
-    }    
-}
 .sidebar-border-left{
     position: relative;
     @include media-breakpoint-up(md){

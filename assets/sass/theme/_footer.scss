@@ -7,12 +7,12 @@
             display: block;
             margin-bottom: 6px;
 
-            @include hover{color: $theme-danger-color;}
+            @include hover{color: $danger;}
         }
     }
     &-copyright{
         li a{color: rgba(255, 255, 255, 0.65);
-            @include hover{color: $theme-danger-color;}
+            @include hover{color: $danger;}
         }
         li:not(:first-child) a{
 
@@ -29,7 +29,7 @@
             color: $light;
 
             @include hover{
-                color: $theme-danger-color;
+                color: $danger;
             }
         }
     }

@@ -1,17 +1,25 @@
-.authenticated-page{@include size(100%, 100vh);
+.authenticated-page{
+    &{
+        @include size(100%, 100vh);
+    }
+    &.header-area-minus{
+        height: calc(100vh - 100px) !important;
+    }
     .form-control{background-color: #F3F3F3;}
     .form-password-box-input{position: relative;}
-    #view-input-password{@include position(absolute, $top: 50%, $right: 15px);cursor: pointer;}
+    .eye-btn{@include position(absolute, $top: 50%, $right: 15px);cursor: pointer;}
 }
+
 
 
 // Responsive
 @include media-breakpoint-up(md){
     .authenticated-page-banner{height: 100vh}
-    .header-area-area-minus{
-		height: calc(100vh - 100px) !important;
+
+    .display-404{
+        font-size: 300px;
+        line-height: 280px;
     }
-    .display-404{font-size: 300px;}
 }
 
 @include media-breakpoint-down(md){
@@ -25,7 +33,7 @@
         border-bottom : 1px solid $border-color;
         tr th{
             padding-bottom: 15px;
-            color: $theme-dark-color;
+            color: $dark;
             white-space: nowrap;
         }
     }
@@ -48,6 +56,11 @@
     min-height: 250px;
 }
 
+.shadow-xs{
+    box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+
 @include media-breakpoint-up(lg){
     .user-address-item-list{
         > li:nth-child(odd){
@@ -62,5 +75,9 @@
         > li:nth-child(even){
             padding-left: 80px;
         }
+    }
+    
+    .leftside_border{
+        border-left: 1px solid $border-color !important;
     }
 }

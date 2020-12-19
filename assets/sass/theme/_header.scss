@@ -23,7 +23,7 @@
 		font-size: 18px;
 
 		&:hover, &.active{
-			color: $theme-danger-color;
+			color: $danger;
 		}
 		@media (min-width: 991px){	
 			margin-left: 20px;
@@ -54,12 +54,12 @@
 			@include transition();
 
 			@include hover{
-				background-color: rgba($theme-danger-color, 0.2);
+				background-color: rgba($danger, 0.2);
 			}
 		}
 		&-count{
 			@include position(absolute, $top: -6px, $right: -6px);
-			background-color: $theme-danger-color;
+			background-color: $danger;
 			color: $light;
 			@include border-radius(50px);
 			display: inline-block;
@@ -83,7 +83,7 @@
 		display: block;
 		width: 25px;
 		height: 2px;
-		background: $theme-dark-color;
+		background: $dark;
 		margin: auto;
 		margin-bottom: 5px;
 		@include transition($transition-base);
@@ -117,7 +117,7 @@
 
 @media(max-width: 1199px){
 	.navbar-collapse{
-		background-color: $theme-dark-color;
+		background-color: $dark;
 		padding : 10px 20px;
 		margin :0px -15px;
 
@@ -125,7 +125,7 @@
 			color: $light !important;
 		}
 		.dropdown-menu{
-			background-color: rgba($theme-dark-color, 0.6);
+			background-color: rgba($dark, 0.6);
 		}
 	}
 }

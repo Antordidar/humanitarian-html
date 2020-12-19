@@ -393,3 +393,18 @@ $unit: 'px'; // Feel free to change the unit.
    line-height: inherit;
    cursor: pointer;
 }
+
+@mixin color($color: primary, $color2: null) {
+
+   @if ($color == primary) {
+     background-color: $body-color;
+     color: $font-color;
+   }
+   @if ($color == secendary) {
+     background-color: $theme-color;
+     color: $white;
+   }@else{
+      background-color: $color;
+   }
+   color: $color2;
+}
